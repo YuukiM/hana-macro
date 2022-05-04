@@ -46,7 +46,7 @@
                         <li>新しい記事はありません。</li>
                     <?php endif; ?>
                 </ul>
-                <a class="detail-button" href="new.html">もっと見る</a>
+                <a class="detail-button" href="new">もっと見る</a>
             </section>
             <section class="ad-area common-section">
                 AD
@@ -83,7 +83,7 @@
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
                 </ul>
-                <a class="detail-button" href="#">もっと見る</a>
+                <a class="detail-button" href="pick-up">もっと見る</a>
             </section>
             <section class="information common-section">
                 <h2 class="information__heading section-heading">
