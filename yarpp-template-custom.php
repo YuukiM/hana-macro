@@ -30,7 +30,7 @@ Notes:
 	while ( have_posts() ) :
 		the_post();
 		?>
-        <?php $image_field = get_field('image'); ?>
+        <?php $image_field = get_field('post-image'); ?>
 	<li>
         <a href="<?php the_permalink(); ?>" rel="bookmark norewrite" title="<?php the_title_attribute(); ?>" >
             <img src="<?php echo $image_field; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
