@@ -170,8 +170,7 @@ header .site-title {
 .common-image-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     gap: 10px;
 }
 
@@ -472,6 +471,11 @@ header .site-title {
     }
 
     /* Images list */
+
+    .common-image-list {
+        gap: 15px;
+    }
+
     .common-image-list li {
         width: calc(100%/3 - 10px);
     }
@@ -636,7 +640,7 @@ header .site-title {
     /* Images list */
 
     .common-image-list {
-        gap: 20px;
+        gap: 24px;
     }
 
     .common-image-list li {
