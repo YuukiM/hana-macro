@@ -27,8 +27,8 @@
                         花の名前、色、季節などで検索
                     </p>
                 </div>
-                <p class="kiyaku">
-                    <a class="kiyaku-link" href="terms-of-use">ご利用規約</a>
+                <p class="top-image__kiyaku">
+                    <a class="top-image__kiyaku-link" href="terms-of-use">ご利用規約</a>
                 </p>
             </div>
         </section>

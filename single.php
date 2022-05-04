@@ -20,6 +20,9 @@
                         <?php the_content(); ?>
                     </div>
                     <a href="<?php echo $image_field; ?>" class="download-button" download>無料ダウンロード <i class="fa-solid fa-file-arrow-down"></i></a>
+                    <p class="kiyaku">
+                        <a class="kiyaku-link" href="terms-of-use" target="_blank">ご利用規約</a>
+                    </p>
                 <?php endwhile;?>
             <?php else : ?>
                 <p>新しい記事はありません。</p>

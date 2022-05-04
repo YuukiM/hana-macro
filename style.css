@@ -87,8 +87,8 @@ header .site-title {
 .top-image__heading,
 .top-image__lead,
 .top-image__search-text,
-.kiyaku,
-.kiyaku-link {
+.top-image__kiyaku,
+.top-image__kiyaku-link {
     color: #fff;
     text-align: center;
     z-index: 1;
@@ -141,7 +141,7 @@ header .site-title {
     margin-bottom: 10px;
 }
 
-.kiyaku-link {
+.top-image__kiyaku-link {
     text-decoration: underline;
 }
 
@@ -348,6 +348,20 @@ header .site-title {
     font-size: 18px;
     font-weight: bold;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kiyaku {
+    color: #FF2382;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.kiyaku-link {
+    text-decoration: underline;
+}
+
+.kiyaku-link:hover {
+    text-decoration: none;
 }
 
 /*
