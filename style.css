@@ -107,7 +107,7 @@ header .site-title {
     margin-bottom: 32px;
 }
 
-.top-image__search {
+.search-area {
     position: relative;
     display: block;
     width: 90%;
@@ -118,13 +118,14 @@ header .site-title {
     padding: 10px;
     margin: 0 auto 10px;
     z-index: 1;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2)
 }
 
-.top-image__input-text {
+.search-area__text {
     width: 70%;
 }
 
-.top-image__search-button {
+.search-area__button {
     position: absolute;
     top: 0;
     right: 0;
@@ -466,11 +467,29 @@ header .site-title {
     margin-bottom: 40px;
 }
 
+/*
+    In-page search
+*/
+
+.in-page-search {
+    background-color: #f1f1f1;
+}
+
+.in-page-seach__text {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+
 
 /*
     Tablet
 */
 @media screen and (min-width: 768px) {
+
+    .sp-only {
+        display: none;
+    }
 
     .top-image {
         height: 400px;

@@ -17,12 +17,7 @@
                     </p>
                 </div>
                 <div class="top-image__bottom">
-                    <label class="top-image__search">
-                        <input type="text" class="top-image__input-text" id="searchQuery">
-                        <button type="button" class="top-image__search-button">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </label>
+                    <?php get_search_form(); ?>
                     <p class="top-image__search-text">
                         花の名前、色、季節などで検索
                     </p>
