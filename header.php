@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes( $doctype ); ?>>
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <header class="header">
         <h1 class="site-title">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">花マクロワールド</a>
