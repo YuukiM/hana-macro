@@ -24,8 +24,9 @@ Notes:
 
 */
 ?>
-<ul class="related-items__list common-image-list">
+
 <?php if ( have_posts() ) : ?>
+    <ul class="related-items__list common-image-list">
 	<?php
 	while ( have_posts() ) :
 		the_post();
@@ -39,5 +40,5 @@ Notes:
 	<?php endwhile; ?>
 </ul>
 <?php else : ?>
-<p>No related posts.</p>
+<p class="no-related-post">関連する写真はありません</p>
 <?php endif; ?>

@@ -368,6 +368,10 @@ header .site-title {
     color: #5bcc81;
 }
 
+.no-related-post {
+    text-align: center;
+}
+
 .modaal-container {
     max-width:700px;
 }
