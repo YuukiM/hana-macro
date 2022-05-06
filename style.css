@@ -5,10 +5,14 @@
     Version: 0.1
 */
 
-
 @charset "UTF-8";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    color: #707070;
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 14px;
     line-height: 1.5;
@@ -19,12 +23,6 @@ body {
 img {
     width: 100%;
 }
-
-html {
-    color: #707070;
-}
-
-
 
 /* Header */
 

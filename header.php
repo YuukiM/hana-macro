@@ -7,15 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8cd2a8b7a7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="slick/slick-theme.css">
-    <script src="slick/slick.min.js"></script>
-    <link rel="stylesheet" href="style.css">
     <script src="js/script.js"></script>
     <title>花マクロワールド</title>
     <?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
     <header class="header">
         <h1 class="site-title">
