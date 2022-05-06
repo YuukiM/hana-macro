@@ -28,7 +28,9 @@
     </div>
     <div id="tagModal" style="display:none;">
         <?php if ( is_active_sidebar('modal') ) : ?>
-            <?php dynamic_sidebar('modal'); ?>
+            <ul>
+                <?php dynamic_sidebar('modal'); ?>
+            </ul>
         <?php endif; ?>
     </div>
 </body>

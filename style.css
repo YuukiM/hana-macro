@@ -364,6 +364,13 @@ header .site-title {
     background: #ff006e;
 }
 
+.modaal-overlay {
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    opacity: 1 !important;
+    background: rgba(0,0,0,0.5) !important;
+}
+
 /*
     Single
 */
