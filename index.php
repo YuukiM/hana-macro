@@ -18,7 +18,7 @@
                 </div>
                 <div class="top-image__bottom">
                     <?php get_search_form(); ?>
-                    <p class="top-image__search-text">
+                    <p class="search-text">
                         花の名前、色、季節などで検索
                     </p>
                 </div>

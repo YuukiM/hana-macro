@@ -1,5 +1,3 @@
 $(function(){
-
-
-
+    $(".search-modal").modaal();
 });

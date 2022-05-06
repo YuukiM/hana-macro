@@ -84,7 +84,7 @@ header .site-title {
 
 .top-image__heading,
 .top-image__lead,
-.top-image__search-text,
+.search-text,
 .top-image__kiyaku,
 .top-image__kiyaku-link {
     color: #fff;
@@ -136,7 +136,7 @@ header .site-title {
 }
 
 
-.top-image__search-text {
+.search-text {
     margin-bottom: 10px;
 }
 
@@ -284,7 +284,6 @@ header .site-title {
     box-shadow: -5px 0 10px rgba(0,0,0,0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-
 }
 
 .footer__nav li a {
@@ -299,6 +298,37 @@ header .site-title {
     font-size: 20px;
     margin-bottom: 5px;
 }
+
+.modaal-container {
+    background: transparent;
+    box-shadow: none;
+}
+
+.modaal-wrapper .modaal-close {
+    border: 2px solid #fff;
+}
+
+.modaal-close:after,
+.modaal-close:before {
+    top: 11px;
+    left: 22px;
+    width: 4px;
+    height: 24px;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+    background: #ff006e;
+}
+
+.modaal-close {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150px)
+}
+
 
 .single-item {
     background-color: #f1f1f1;
@@ -473,7 +503,7 @@ header .site-title {
     background-color: #f1f1f1;
 }
 
-.in-page-seach__text {
+.in-page-search__text {
     text-align: center;
     margin-bottom: 8px;
 }
@@ -515,6 +545,14 @@ header .site-title {
         width: 640px;
         margin: auto;
     }
+
+
+    .modaal-close {
+        top: 50%;
+        left: 50%;
+        transform: translate(200px, -100px)
+    }
+
 
 
     /*
