@@ -24,7 +24,9 @@ img {
     width: 100%;
 }
 
-/* Header */
+/*
+    Header
+*/
 
 header {
     padding: 8px;
@@ -41,7 +43,9 @@ header .site-title {
     display: none;
 }
 
-/* Top Image */
+/*
+    Top Image
+*/
 
 .top-image {
     position: relative;
@@ -105,6 +109,15 @@ header .site-title {
     margin-bottom: 32px;
 }
 
+.top-image__kiyaku-link {
+    text-decoration: underline;
+}
+
+
+/*
+    Search Area
+*/
+
 .search-area {
     position: relative;
     display: block;
@@ -116,7 +129,9 @@ header .site-title {
     padding: 10px;
     margin: 0 auto 10px;
     z-index: 1;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2)
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .search-area__text {
@@ -135,20 +150,21 @@ header .site-title {
     background: linear-gradient(to right, #DF72FF, #FF2382);
 }
 
-
 .search-text {
     margin-bottom: 10px;
 }
 
-.top-image__kiyaku-link {
-    text-decoration: underline;
-}
+/*
+    Content
+*/
 
 .content {
     padding-top: 350px;
 }
 
-/* Common section */
+/*
+    Common section
+*/
 
 .common-section {
     background-color: #fbfbfb;
@@ -164,7 +180,9 @@ header .site-title {
   text-transform: uppercase;
 }
 
-/* Images list */
+/*
+    Images list
+*/
 
 .common-image-list {
     display: flex;
@@ -181,7 +199,9 @@ header .site-title {
     display: block;
 }
 
-/* Detail button */
+/*
+    Detail button
+*/
 
 .detail-button {
     display: flex;
@@ -205,13 +225,21 @@ header .site-title {
     transform: rotate(45deg);
 }
 
-/* Information */
+/*
+    Pick up
+*/
+
+.pick-up {
+    background-color: #f1f1f1;
+}
+
+/*
+    Information
+*/
 
 .information-list {
     margin: 0 auto 40px;
     max-width: 640px;
-
-
 }
 
 .information-list li {
@@ -232,14 +260,12 @@ header .site-title {
     width: 70%;
 }
 
-/* Footer */
+/*
+    Footer
+*/
 
-.footer-top {
+.footer__top {
     background-color: #f4f4f4;
-}
-
-.footer-top-list {
-
 }
 
 .footer-top-list li {
@@ -265,14 +291,18 @@ header .site-title {
     width: 100%;
 }
 
-.footer-bottom {
+.footer__bottom {
     background-color: #ff006e;
     color: #ffffff;
     padding: 10px;
     margin-bottom: 65px;
 }
 
-.footer__nav {
+/*
+    SP Nav
+*/
+
+.footer__sp-nav {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -286,7 +316,7 @@ header .site-title {
     backdrop-filter: blur(10px);
 }
 
-.footer__nav li a {
+.footer__sp-nav li a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,28 +329,18 @@ header .site-title {
     margin-bottom: 5px;
 }
 
+/*
+    Modal
+*/
+
 .modaal-container {
     background: transparent;
     box-shadow: none;
+    max-width:700px;
 }
 
 .modaal-wrapper .modaal-close {
     border: 2px solid #fff;
-}
-
-.modaal-close:after,
-.modaal-close:before {
-    top: 11px;
-    left: 22px;
-    width: 4px;
-    height: 24px;
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before {
-    background: #ff006e;
 }
 
 .modaal-close {
@@ -329,13 +349,27 @@ header .site-title {
     transform: translate(-50%, 200px);
 }
 
+.modaal-close::after,
+.modaal-close::before {
+    top: 11px;
+    left: 22px;
+    width: 4px;
+    height: 24px;
+}
+
+.modaal-close:focus::after,
+.modaal-close:focus::before,
+.modaal-close:hover::after,
+.modaal-close:hover::before {
+    background: #ff006e;
+}
+
+/*
+    Single
+*/
 
 .single-item {
     background-color: #f1f1f1;
-}
-
-.single-item__inner {
-
 }
 
 .single-item__heading {
@@ -347,10 +381,6 @@ header .site-title {
     flex-wrap: wrap;
     gap: 10px;
     margin: 16px 0;
-}
-
-.single-item__tags li {
-
 }
 
 .single-item__tags li a {
@@ -366,29 +396,6 @@ header .site-title {
 .single-item__tags li a:hover {
     background-color: #fff;
     color: #5bcc81;
-}
-
-.no-related-post {
-    text-align: center;
-}
-
-.modaal-container {
-    max-width:700px;
-}
-
-
-.wp-block-tag-cloud a {
-    border: 1px solid #5bcc81;
-    background-color: #5bcc81;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    border-radius: 3px;
-    color: #ffffff;
-    transition: 0.2s;
-}
-
-.wp-block-tag-cloud a:hover {
-    background-color: transparent;
 }
 
 .download-button {
@@ -420,6 +427,29 @@ header .site-title {
 .kiyaku-link:hover {
     text-decoration: none;
 }
+
+.no-related-post {
+    text-align: center;
+}
+
+/*
+    Tag Cloud
+*/
+
+.wp-block-tag-cloud a {
+    border: 1px solid #5bcc81;
+    background-color: #5bcc81;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.wp-block-tag-cloud a:hover {
+    background-color: transparent;
+}
+
 
 /*
     Page
@@ -495,7 +525,6 @@ header .site-title {
     color: #ff2382;
 }
 
-
 .post-section ul {
     list-style: disc outside;
     margin: 1.5em 0 1.5em 1.5em;
@@ -541,11 +570,16 @@ header .site-title {
 /*
     Tablet
 */
+
 @media screen and (min-width: 768px) {
 
     .sp-only {
         display: none;
     }
+
+    /*
+        Top Image
+    */
 
     .top-image {
         height: 400px;
@@ -559,7 +593,9 @@ header .site-title {
         height: 400px;
     }
 
-    /* Images list */
+    /*
+        Images list
+    */
 
     .common-image-list {
         gap: 15px;
@@ -574,14 +610,15 @@ header .site-title {
         margin: auto;
     }
 
+    /*
+        Modal
+    */
 
     .modaal-close {
         top: 50%;
         left: 50%;
         transform: translate(325px, -130px)
     }
-
-
 
     /*
         Page
@@ -610,7 +647,7 @@ header .site-title {
     }
 
     /*
-        Page
+        Information
     */
 
     .information-section h1 {
@@ -626,10 +663,13 @@ header .site-title {
 */
 @media screen and (min-width: 1024px) {
 
-
     body {
         font-size: 16px;
     }
+
+    /*
+       Header
+    */
 
     header {
         position: fixed;
@@ -647,7 +687,6 @@ header .site-title {
     .header__nav {
         display: flex;
         color: #ffffff;
-
     }
 
     .header__nav li {
@@ -667,10 +706,17 @@ header .site-title {
         margin-bottom: 5px;
     }
 
+    /*
+        Main
+    */
 
     main {
         padding-top: 66px;
     }
+
+    /*
+        Top Image
+    */
 
     .top-image {
         height: 550px;
@@ -684,15 +730,6 @@ header .site-title {
         height: 550px;
     }
 
-
-    .section-heading {
-        font-size: 32px;
-    }
-
-    .top-image {
-        /*padding: 160px;*/
-    }
-
     .top-image__heading {
         font-size: 48px;
         font-weight: 700;
@@ -703,8 +740,9 @@ header .site-title {
         margin-bottom: 32px;
     }
 
-
-    /* Detail button */
+    /*
+        Detail button
+    */
 
     .detail-button {
         font-size: 24px;
@@ -723,7 +761,13 @@ header .site-title {
         border-right: 2px solid #ff2382;
     }
 
-    /* Common section */
+    /*
+        Common section
+    */
+
+    .section-heading {
+        font-size: 32px;
+    }
 
     .common-section {
         padding: 80px 40px;
@@ -734,7 +778,9 @@ header .site-title {
         /*margin-bottom: 80px;*/
     }
 
-    /* Images list */
+    /*
+        Images list
+    */
 
     .common-image-list {
         gap: 24px;
@@ -742,24 +788,20 @@ header .site-title {
 
     .common-image-list li {
         width: calc(100%/6 - 20px);
-
     }
 
     .common-image-list li a {
         transition: box-shadow 0.2s;
-
     }
 
     .common-image-list li a:hover {
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
-    
-    /* Pick up */
-    .pick-up {
-        background-color: #f1f1f1;
-    }
 
-    /* information */
+
+    /*
+        information
+    */
 
     .information__date {
         width: 18%;
@@ -778,7 +820,11 @@ header .site-title {
         text-decoration: underline;
     }
 
-    .footer-top {
+    /*
+        Footer
+    */
+
+    .footer__top {
         padding: 20px 0;
     }
 
@@ -797,13 +843,17 @@ header .site-title {
         text-decoration: underline;
     }
 
-    .footer-bottom {
+    .footer__bottom {
         margin-bottom: 0;
     }
 
-    .footer__nav {
+    .footer__sp-nav {
         display: none;
     }
+
+    /*
+        Single
+    */
 
     .single-item__tags li a:hover {
         background-color: #ffffff;
