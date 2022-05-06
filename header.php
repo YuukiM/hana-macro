@@ -12,12 +12,16 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
     <?php if ( is_home() ): ?>
         <title><?php bloginfo('name'); ?></title>
+        <meta name=”description” content="<?php bloginfo( "description" ); ?>" />
     <?php elseif( is_single() ): ?>
         <title><?php echo get_the_title()."のマクロ写真" ?> | <?php bloginfo('name'); ?></title>
+        <meta name=”description” content="<?php echo get_the_title()."のマクロ写真を無料ダウンロード" ?>" />
     <?php else: ?>
         <title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
+        <meta name=”description” content="<?php bloginfo( "description" ); ?>" />
     <?php endif; ?>
     <?php wp_head(); ?>
+
 </head>
 <body <?php body_class(); ?>>
     <header class="header">
