@@ -4,10 +4,10 @@
             <?php if ( have_posts() ) : ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <h1 class="single-item__heading section-heading">
-                        <?php the_title(); ?>
+                        <?php echo get_the_title()."のマクロ写真" ?>
                     </h1>
                     <?php $image_field = get_field('post-image'); ?>
-                    <img src="<?php echo $image_field; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                    <img src="<?php echo $image_field; ?>" alt="<?php the_title(); ?>のマクロ写真" title="<?php the_title(); ?>のマクロ写真">
                     <ul class="single-item__tags">
                         <?php
                         $tags = get_the_tags();

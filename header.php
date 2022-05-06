@@ -10,7 +10,13 @@
     <script src="https://kit.fontawesome.com/8cd2a8b7a7.js" crossorigin="anonymous"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/modaal.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
-    <title>花マクロワールド</title>
+    <?php if ( is_home() ): ?>
+        <title><?php bloginfo('name'); ?></title>
+    <?php elseif( is_single() ): ?>
+        <title><?php echo get_the_title()."のマクロ写真" ?> | <?php bloginfo('name'); ?></title>
+    <?php else: ?>
+        <title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
+    <?php endif; ?>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
