@@ -60,3 +60,13 @@ function custom_search($search, $wp_query) {
     return $search;
 }
 add_filter('posts_search','custom_search', 10, 2);
+
+
+// ウィジェット
+function theme_widgets_init(){
+    register_sidebar(array(
+        'name'=>'モーダル内',
+        'id'=>'modal',
+    ));
+}
+add_action('widgets_init','theme_widgets_init');

@@ -15,7 +15,7 @@
         </section>
         <ul class="footer__nav">
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa-solid fa-house-chimney footer__icon"></i><p>Home</p></a></li>
-            <li><a href="#"><i class="fa-solid fa-tags footer__icon"></i><p>Tag</p></a></li>
+            <li><a href="#tagModal" class="tag-modal"><i class="fa-solid fa-tags footer__icon"></i><p>Tag</p></a></li>
             <li><a href="#searchModal" class="search-modal"><i class="fa-solid fa-magnifying-glass footer__icon"></i><p>Search</p></a></li>
         </ul>
     </footer>
@@ -24,6 +24,11 @@
         <p class="search-text">
             花の名前、色、季節などで検索
         </p>
+    </div>
+    <div id="tagModal" style="display:none;">
+        <?php if ( is_active_sidebar('modal') ) : ?>
+            <?php dynamic_sidebar('modal'); ?>
+        <?php endif; ?>
     </div>
 </body>
 <?php wp_footer(); ?>

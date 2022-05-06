@@ -20,7 +20,7 @@
         </h1>
         <ul class="header__nav">
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa-solid fa-house-chimney header__icon"></i><p>Home</p></a></li>
-            <li><a href="#"><i class="fa-solid fa-tags header__icon"></i><p>Tag</p></a></li>
+            <li><a href="#tagModal" class="tag-modal"><i class="fa-solid fa-tags header__icon"></i><p>Tag</p></a></li>
             <?php if ( is_home() ): ?>
                 <li><a href="#"><i class="fa-solid fa-magnifying-glass header__icon"></i><p>Search</p></a></li>
             <?php else: ?>
