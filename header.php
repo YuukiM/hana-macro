@@ -16,6 +16,9 @@
     <?php elseif( is_single() ): ?>
         <title><?php echo get_the_title().'のマクロ写真' ?> | <?php bloginfo('name'); ?></title>
         <meta name=”description” content="<?php echo get_the_title()."のマクロ写真を無料ダウンロード" ?>" />
+    <?php elseif( is_404() ): ?>
+        <title>お探しのページは見つかりませんでした | <?php bloginfo('name'); ?></title>
+        <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
     <?php else: ?>
         <title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
         <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
