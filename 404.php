@@ -34,7 +34,7 @@
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
     </ul>
-    <a class="detail-button" href="new">もっと見る</a>
+    <a class="button-primary" href="new">もっと見る</a>
 </section>
 <section class="pick-up common-section">
     <h2 class="pick-up__heading section-heading">
@@ -68,6 +68,6 @@
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
     </ul>
-    <a class="detail-button" href="pick-up">もっと見る</a>
+    <a class="button-primary" href="pick-up">もっと見る</a>
 </section>
 <?php get_footer(); ?>

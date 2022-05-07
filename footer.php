@@ -4,7 +4,7 @@
             <ul class="footer-top-list">
                 <li><a href="about-the-site">このサイトについて</a></li>
                 <li><a href="terms-of-use">ご利用規約</a></li>
-                <li><a href="#">お問合せ</a></li>
+                <li><a href="contact">お問合せ</a></li>
                 <li><a href="#">プライバシーポリシー</a></li>
             </ul>
         </section>

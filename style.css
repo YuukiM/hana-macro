@@ -203,7 +203,7 @@ header .site-title {
     Detail button
 */
 
-.detail-button {
+.button-primary {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -216,7 +216,7 @@ header .site-title {
     border: 1px solid #ff2382;
 }
 
-.detail-button::after {
+.button-primary::after {
     content: "";
     width: 10px;
     height: 10px;
@@ -751,18 +751,18 @@ header .site-title {
         Detail button
     */
 
-    .detail-button {
+    .button-primary {
         font-size: 24px;
         width: 220px;
         transition: 0.2s;
     }
 
-    .detail-button:hover {
+    .button-primary:hover {
         background-color: #ffffff;
         color: #ff2382;
     }
 
-    .detail-button:hover::after {
+    .button-primary:hover::after {
         transition: border 0.2s;
         border-top: 2px solid #ff2382;
         border-right: 2px solid #ff2382;

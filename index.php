@@ -41,7 +41,7 @@
                         <li>新しい記事はありません。</li>
                     <?php endif; ?>
                 </ul>
-                <a class="detail-button" href="new">もっと見る</a>
+                <a class="button-primary" href="new">もっと見る</a>
             </section>
             <section class="ad-area common-section">
                 AD
@@ -78,7 +78,7 @@
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
                 </ul>
-                <a class="detail-button" href="pick-up">もっと見る</a>
+                <a class="button-primary" href="pick-up">もっと見る</a>
             </section>
             <section class="information common-section">
                 <h2 class="information__heading section-heading">
@@ -109,6 +109,6 @@
                     <?php endif; ?>
                     <?php wp_reset_postdata(); ?>
                 </ul>
-                <a class="detail-button" href="information">もっと見る</a>
+                <a class="button-primary" href="information">もっと見る</a>
             </section>
 <?php get_footer(); ?>
