@@ -13,11 +13,14 @@
         if ( $the_query->have_posts() ) :
             while ( $the_query->have_posts() ) :
                 $the_query->the_post();
-
                 ?>
 
                 <?php $image_field = get_field('post-image'); ?>
-                <li><a href="<?php the_permalink(); ?>"><img src="<?php echo $image_field; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" loading="lazy"></a></li>
+                <li>
+                    <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo $image_field; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" loading="lazy">
+                    </a>
+                </li>
             <?php endwhile;?>
         <?php else : ?>
             <li>新しい記事はありません。</li>
