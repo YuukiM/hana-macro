@@ -31,6 +31,13 @@ img {
     width: 100%;
 }
 
+a {
+    /* iOS Safariの青い線を消す */
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    cursor: pointer;
+}
+
 /*
     Header
 */
