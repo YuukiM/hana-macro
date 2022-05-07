@@ -6,8 +6,21 @@
                     <h1 class="single-item__heading section-heading">
                         <?php echo get_the_title().'のマクロ写真' ?>
                     </h1>
-                    <?php $image_field = get_field('post-image'); ?>
-                    <img src="<?php echo $image_field; ?>" alt="<?php the_title(); ?>のマクロ写真" title="<?php the_title(); ?>のマクロ写真">
+                    <?php
+                        $image_field = get_field('post-image');
+                        $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+                        $fullsize = 'medium'; // (thumbnail, medium, large, full or custom size)
+                        $img_attr = array(
+                            'src'   => $src,	// アイキャッチ画像の URL
+                            'class' => "attachment-$size",	// 指定した大きさ
+                            'alt'   => get_the_title().'のマクロ写真',	// アイキャッチ画像の抜粋
+                            'title' => get_the_title().'のマクロ写真',	// アイキャッチ画像のタイトル
+                        );
+                        $image = wp_get_attachment_image( $image_field, $size, false, $img_attr );
+                        $url = wp_get_attachment_image_src( $image_field, $fullsize);
+
+                    ?>
+                    <?php echo $image; ?>
                     <ul class="single-item__tags">
                         <?php
                         $tags = get_the_tags();
@@ -19,7 +32,7 @@
                     <div class="single-item__text">
                         <?php the_content(); ?>
                     </div>
-                    <a href="<?php echo $image_field; ?>" class="download-button" download>無料ダウンロード <i class="fa-solid fa-file-arrow-down"></i></a>
+                    <a href="<?php echo $url[0]; ?>" class="download-button" download>無料ダウンロード <i class="fa-solid fa-file-arrow-down"></i></a>
                     <p class="kiyaku">
                         <a class="kiyaku-link" href="terms-of-use" target="_blank">ご利用規約</a>
                     </p>
