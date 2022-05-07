@@ -1,12 +1,13 @@
 </main>
     <footer class="footer">
         <section class="footer__top">
-            <ul class="footer-top-list">
-                <li><a href="about-the-site">このサイトについて</a></li>
-                <li><a href="terms-of-use">ご利用規約</a></li>
-                <li><a href="contact">お問合せ</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
-            </ul>
+            <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'footer-menu',
+                    'container' => false,
+                    'menu_class' => 'footer-top-list',
+                ) );
+            ?>
         </section>
         <section class="footer__bottom">
             <small>
