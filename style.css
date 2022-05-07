@@ -226,6 +226,49 @@ header .site-title {
 }
 
 /*
+    form button
+*/
+
+div.wpforms-container-full .wpforms-form input[type=submit],
+div.wpforms-container-full .wpforms-form button[type=submit],
+div.wpforms-container-full .wpforms-form .wpforms-page-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff2382;
+    color: #fff;
+    border-radius: 40px;
+    padding: 12px 20px;
+    width: 160px;
+    margin: auto;
+    border: 1px solid #ff2382;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit]::after,
+div.wpforms-container-full .wpforms-form button[type=submit]::after,
+div.wpforms-container-full .wpforms-form .wpforms-page-button::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+
+/*
+    Sent Message
+*/
+
+.wpforms-confirmation-container-full,
+div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+    border: 1px solid #5bcc81;
+    background-color: #5bcc81;
+    border-radius: 3px;
+    color: #fff;
+}
+
+/*
     Pick up
 */
 
@@ -763,6 +806,33 @@ header .site-title {
     }
 
     .button-primary:hover::after {
+        transition: border 0.2s;
+        border-top: 2px solid #ff2382;
+        border-right: 2px solid #ff2382;
+    }
+
+    /*
+        form button
+    */
+
+    div.wpforms-container-full .wpforms-form input[type=submit],
+    div.wpforms-container-full .wpforms-form button[type=submit],
+    div.wpforms-container-full .wpforms-form .wpforms-page-button {
+        font-size: 24px;
+        width: 220px;
+        transition: 0.2s;
+    }
+
+    div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+    div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+    div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
+        background-color: #ffffff;
+        color: #ff2382;
+    }
+
+    div.wpforms-container-full .wpforms-form input[type=submit]:hover::after,
+    div.wpforms-container-full .wpforms-form button[type=submit]:hover::after,
+    div.wpforms-container-full .wpforms-form .wpforms-page-button:hover::after {
         transition: border 0.2s;
         border-top: 2px solid #ff2382;
         border-right: 2px solid #ff2382;
