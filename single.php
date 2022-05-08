@@ -9,7 +9,7 @@
                     <?php
                         $image_field = get_field('post-image');
                         $size = 'medium'; // (thumbnail, medium, large, full or custom size)
-                        $fullsize = 'medium'; // (thumbnail, medium, large, full or custom size)
+                        $fullsize = 'full'; // (thumbnail, medium, large, full or custom size)
                         $img_attr = array(
                             'src'   => $src,	// アイキャッチ画像の URL
                             'class' => "attachment-$size",	// 指定した大きさ

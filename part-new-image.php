@@ -13,20 +13,10 @@
         if ( $the_query->have_posts() ) :
             while ( $the_query->have_posts() ) :
                 $the_query->the_post();
-
-                $image_field = get_field('post-image');
-                $size = 'medium'; // (thumbnail, medium, large, full or custom size)
-                $img_attr = array(
-                    'src'   => $src,	// アイキャッチ画像の URL
-                    'class' => "attachment-$size",	// 指定した大きさ
-                    'alt'   => get_the_title().'のマクロ写真',	// アイキャッチ画像の抜粋
-                    'title' => get_the_title().'のマクロ写真',	// アイキャッチ画像のタイトル
-                );
-                $image = wp_get_attachment_image( $image_field, $size, false, $img_attr );
         ?>
                 <li>
                     <a href="<?php the_permalink(); ?>">
-                        <?php echo $image; ?>
+                        <?php attachment_image('medium'); ?>
                     </a>
                 </li>
             <?php endwhile;?>

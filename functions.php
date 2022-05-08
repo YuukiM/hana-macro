@@ -80,3 +80,17 @@ function register_my_menus() {
     ) );
 }
 add_action( 'after_setup_theme', 'register_my_menus' );
+
+function attachment_image($size) {
+    $image_field = get_field('post-image');
+
+    $image_size = $size; // (thumbnail, medium, large, full or custom size)
+    $img_attr = array(
+        'src'   => $src,	// アイキャッチ画像の URL
+        'class' => "attachment-$image_size",	// 指定した大きさ
+        'alt'   => get_the_title().'のマクロ写真',	// アイキャッチ画像の抜粋
+        'title' => get_the_title().'のマクロ写真',	// アイキャッチ画像のタイトル
+    );
+    $image = wp_get_attachment_image( $image_field, $image_size, false, $img_attr );
+    echo $image;
+}
