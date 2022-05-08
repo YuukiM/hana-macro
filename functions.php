@@ -81,7 +81,7 @@ function register_my_menus() {
 }
 add_action( 'after_setup_theme', 'register_my_menus' );
 
-function attachment_image($size) {
+function attachment_image($size, $type) {
     $image_field = get_field('post-image');
 
     $image_size = $size; // (thumbnail, medium, large, full or custom size)
@@ -92,5 +92,14 @@ function attachment_image($size) {
         'title' => get_the_title().'のマクロ写真',	// アイキャッチ画像のタイトル
     );
     $image = wp_get_attachment_image( $image_field, $image_size, false, $img_attr );
-    echo $image;
+    $url = wp_get_attachment_image_src( $image_field, $size);
+
+    if ($type == 'url') {
+        echo $url[0];
+    } elseif ($type == 'img') {
+        echo $image;
+    } else {
+        echo $image;
+    }
+
 }

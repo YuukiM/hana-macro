@@ -32,7 +32,7 @@ Notes:
 	?>
 	<li>
         <a href="<?php the_permalink(); ?>" rel="bookmark norewrite" title="<?php the_title_attribute(); ?>" >
-            <?php attachment_image('medium'); ?>
+            <?php attachment_image('medium', 'img'); ?>
         </a><!-- (<?php the_score(); ?>)-->
     </li>
 	<?php endwhile; ?>

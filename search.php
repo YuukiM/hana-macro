@@ -12,7 +12,7 @@
                 ?>
                     <li>
                         <a href="<?php echo get_the_permalink(); ?>">
-                            <?php attachment_image('medium'); ?>
+                            <?php attachment_image('medium', 'img'); ?>
                         </a>
                     </li>
                 <?php endwhile; ?>

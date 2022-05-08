@@ -22,7 +22,7 @@
                 ?>
                     <li>
                         <a href="<?php the_permalink(); ?>">
-                            <?php attachment_image('medium'); ?>
+                            <?php attachment_image('medium', 'img'); ?>
                         </a>
                     </li>
                 <?php endwhile;?>
