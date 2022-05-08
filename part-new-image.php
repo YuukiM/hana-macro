@@ -7,7 +7,7 @@
         $the_query = new WP_Query(
             array(
                 'post_type' => 'post',
-                'posts_per_page' => 60
+                'posts_per_page' => 12
             )
         );
         if ( $the_query->have_posts() ) :

@@ -11,7 +11,7 @@
                 );
                 if ( $the_query->have_posts() ) :
                     while ( $the_query->have_posts() ) :
-
+                        $the_query->the_post();
             ?>
                     <li>
                         <a href="<?php the_permalink(); ?>">
