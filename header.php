@@ -11,7 +11,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/modaal.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
     <?php if ( is_home() ): ?>
-        <title><?php bloginfo('name'); ?></title>
+        <title><?php bloginfo('name'); ?> | <?php bloginfo( 'description' ); ?></title>
         <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
     <?php elseif( is_single() ): ?>
         <title><?php echo get_the_title().'のマクロ写真' ?> | <?php bloginfo('name'); ?></title>
@@ -29,7 +29,7 @@
 <body <?php body_class(); ?>>
     <header class="header">
         <h1 class="site-title">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">花マクロワールド</a>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
         </h1>
         <ul class="header__nav">
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa-solid fa-house-chimney header__icon"></i><p>Home</p></a></li>
