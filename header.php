@@ -10,12 +10,89 @@
     <script src="https://kit.fontawesome.com/8cd2a8b7a7.js" crossorigin="anonymous"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/modaal.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+
+    <?php if ( is_home() ): ?>
+        <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#">
+    <?php else: ?>
+        <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# article: http://ogp.me/ns/article#">
+    <?php endif; ?>
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@myuuki_design" />
+            <meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>" />
+            <?php
+            $the_query = new WP_Query(
+                array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 1,
+                    'meta_query' => array(
+                        'relation' => 'AND',
+                        array(
+                            'key' => 'pickUp',
+                            'value' => 'pickup',
+                            'compare' => 'LIKE'
+                        )
+                    )
+                )
+            );
+            if ( $the_query->have_posts() ) :
+            while ( $the_query->have_posts() ){
+                $the_query->the_post();
+            }
+            ?>
+        <?php if ( is_home() ): ?>
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="<?php bloginfo('name'); ?>" />
+            <meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
+            <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+            <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
+        <?php elseif( is_singular('information') ): ?>
+            <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="<?php echo get_the_title(); ?>" />
+                <meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
+                <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+                <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
+                    <?php endwhile;?>
+                <?php endif; ?>
+        <?php elseif( is_single() ): ?>
+            <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="<?php echo get_the_title().'のマクロ写真' ?>" />
+                <meta property="og:description" content="<?php echo get_the_title().'のマクロ写真を無料ダウンロード' ?>" />
+                <meta property="og:site_name" content=""<?php bloginfo('name'); ?>" />
+                <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
+            <?php endwhile;?>
+            <?php endif; ?>
+        <?php elseif( is_404() ): ?>
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="お探しのページは見つかりませんでした。" />
+            <meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
+            <meta property="og:site_name" content=""<?php bloginfo('name'); ?>" />
+            <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
+        <?php else: ?>
+            <meta property="og:type" content=" article" />
+            <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <meta property="og:title" content="<?php echo get_the_title(); ?>" />
+                <meta property="og:description" content="<?php bloginfo('name'); ?>" />
+                <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+                <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
+                <?php endwhile;?>
+            <?php endif; ?>
+        <?php endif; ?>
+
+    <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
+
+
     <?php if ( is_home() ): ?>
         <title><?php bloginfo('name'); ?> | <?php bloginfo( 'description' ); ?></title>
         <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
     <?php elseif( is_singular('information') ): ?>
         <title><?php echo get_the_title(); ?> | <?php bloginfo('name'); ?></title>
-        <meta name=”description” content="<?php echo get_the_title()."のマクロ写真を無料ダウンロード" ?>" />
+        <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
     <?php elseif( is_single() ): ?>
         <title><?php echo get_the_title().'のマクロ写真' ?> | <?php bloginfo('name'); ?></title>
         <meta name=”description” content="<?php echo get_the_title()."のマクロ写真を無料ダウンロード" ?>" />
