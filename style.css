@@ -401,12 +401,6 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     border: 2px solid #fff;
 }
 
-.modaal-close {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 200px);
-}
-
 .modaal-close::after,
 .modaal-close::before {
     top: 11px;
