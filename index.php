@@ -28,9 +28,12 @@
             </div>
         </section>
         <?php get_template_part('part-new-image'); ?>
-        <section class="ad-area common-section">
+<?php
+        /*<section class="ad-area common-section">
             AD
-        </section>
+        </section>*/
+?>
+
         <?php get_template_part('part-pick-up'); ?>
         <section class="information common-section">
             <h2 class="information__heading section-heading">
