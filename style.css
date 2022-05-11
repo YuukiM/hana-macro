@@ -2,7 +2,7 @@
     Theme Name: Hana Macro Theme
     Description: 花マクロワールドのテーマ
     Author: 宮崎祐樹
-    Version: 1.0
+    Version: 1.05
 */
 
 @charset "UTF-8";
@@ -440,7 +440,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 */
 
 .single-item {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
 }
 
 .single-item__heading {
