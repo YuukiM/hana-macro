@@ -3,6 +3,7 @@
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <h1><?php the_title(); ?></h1>
+                <p class="date"><?php the_time('Y.m.d'); ?></p>
                 <?php the_content(); ?>
             <?php endwhile;?>
         <?php else : ?>
