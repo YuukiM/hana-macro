@@ -101,5 +101,4 @@ function attachment_image($size, $type) {
     } else {
         echo $image;
     }
-
 }

@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/modaal.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/8cd2a8b7a7.js" crossorigin="anonymous"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/modaal.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
     <?php if ( is_home() ): ?>
         <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#">
