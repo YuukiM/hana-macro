@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/modaal.min.css">
 
     <?php if ( is_home() ): ?>
         <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#">
@@ -99,8 +97,9 @@
         <title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
         <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
     <?php endif; ?>
-    <?php wp_head(); ?>
 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/modaal.min.css">
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
     <header class="header">
