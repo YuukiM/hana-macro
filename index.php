@@ -1,7 +1,32 @@
 <?php get_header(); ?>
         <section class="top-image">
             <div class="top-image__slider">
-                <?php echo do_shortcode('[slick-slider fade="true" autoplay_interval="5000" arrows="false" dots="false" speed="1000" ]'); ?>
+                <?php
+                $the_query = new WP_Query(
+                    array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 12,
+                        'meta_query' => array(
+                            'relation' => 'AND',
+                            array(
+                                'key' => 'sliderDisplay',
+                                'value' => 'display',
+                                'compare' => 'LIKE'
+                            )
+                        )
+                    )
+                );
+                if ( $the_query->have_posts() ) :
+                    while ( $the_query->have_posts() ) :
+                        $the_query->the_post();
+                        ?>
+                        <img src="<?php attachment_image('full', 'url'); ?>" srcset="<?php attachment_image('large', 'url'); ?> 1000w, <?php attachment_image('full', 'url'); ?> 1920w," alt="" loading="lazy">
+                    <?php endwhile;?>
+                <?php else : ?>
+                    <li>ピックアップはありません。</li>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
+
             </div>
             <div class="top-image__texts">
                 <div class="top-image__top">

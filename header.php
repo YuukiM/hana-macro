@@ -98,7 +98,8 @@
         <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
     <?php endif; ?>
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/modaal.min.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/modaal.min.css">
+
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

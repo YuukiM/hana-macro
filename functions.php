@@ -115,6 +115,7 @@ function attachment_image($size, $type) {
 /* 管理画面での表示項目追加 */
 function add_custom_column( $defaults ) {
     $defaults['post-image'] = '画像'; //項目名
+    $defaults['sliderDisplay'] = 'スライダーに表示'; //項目名
     return $defaults;
 }
 add_filter('manage_posts_columns', 'add_custom_column');
@@ -124,6 +125,13 @@ function add_custom_column_id($column_name, $id) {
         $cf_column = get_field('post-image', $id);
         $url = wp_get_attachment_image_src( $cf_column);
         echo '<img src="'.$url[0].'" width="100" height="100">';
+    }
+    if ($column_name == 'sliderDisplay') {
+        $cf_column = get_field('sliderDisplay', $id);
+        if ($cf_column[0] == 'display') {
+            $display = '表示する';
+        }
+        echo $display;
     }
 }
 add_action('manage_posts_custom_column', 'add_custom_column_id', 10, 2);
