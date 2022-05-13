@@ -83,19 +83,19 @@
 
     <?php if ( is_home() ): ?>
         <title><?php bloginfo('name'); ?> | <?php bloginfo( 'description' ); ?></title>
-        <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
+        <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
     <?php elseif( is_singular('information') ): ?>
         <title><?php echo get_the_title(); ?> | <?php bloginfo('name'); ?></title>
-        <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
+        <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
     <?php elseif( is_single() ): ?>
         <title><?php echo get_the_title().'のマクロ写真' ?> | <?php bloginfo('name'); ?></title>
-        <meta name=”description” content="<?php echo get_the_title()."のマクロ写真を無料ダウンロード" ?>" />
+        <meta name="description" content="<?php echo get_the_title()."のマクロ写真を無料ダウンロード" ?>" />
     <?php elseif( is_404() ): ?>
         <title>お探しのページは見つかりませんでした | <?php bloginfo('name'); ?></title>
-        <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
+        <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
     <?php else: ?>
         <title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
-        <meta name=”description” content="<?php bloginfo( 'description' ); ?>" />
+        <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
     <?php endif; ?>
 
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/modaal.min.css">
