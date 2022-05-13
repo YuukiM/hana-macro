@@ -6,7 +6,7 @@
                     <h1 class="single-item__heading section-heading">
                         <?php echo get_the_title().'のマクロ写真' ?>
                     </h1>
-                    <?php attachment_image('medium', 'img'); ?>
+                    <img src="<?php attachment_image('large', 'url'); ?>" alt="<?php echo get_the_title().'のマクロ写真'; ?>" title="<?php echo get_the_title().'のマクロ写真'; ?>" width="400" height="300">
                     <ul class="single-item__tags">
                         <?php
                             $tags = get_the_tags();
