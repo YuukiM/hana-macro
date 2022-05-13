@@ -1,10 +1,18 @@
 <?php
 
+// css 読み込み
 function enqueue_scripts(){
-    // css
+
     wp_enqueue_style("style",get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
+
+// jQueryカット
+function deregister_scripts() {
+    wp_deregister_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'deregister_scripts' );
+
 
 // アイキャッチ画像を有効にする。
 add_theme_support('post-thumbnails');
