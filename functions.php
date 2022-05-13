@@ -102,3 +102,19 @@ function attachment_image($size, $type) {
         echo $image;
     }
 }
+
+/* 管理画面での表示項目追加 */
+function add_custom_column( $defaults ) {
+    $defaults['post-image'] = '画像'; //項目名
+    return $defaults;
+}
+add_filter('manage_posts_columns', 'add_custom_column'); //ここでの’blog’はカスタム投稿タイプ
+
+function add_custom_column_id($column_name, $id) {
+    if ($column_name == 'post-image') {
+        $cf_column = get_field('post-image', $id);
+        $url = wp_get_attachment_image_src( $cf_column);
+        echo '<img src="'.$url[0].'" width="100" height="100">';
+    }
+}
+add_action('manage_posts_custom_column', 'add_custom_column_id', 10, 2); //ここでの’blog’はカスタム投稿タイプ
