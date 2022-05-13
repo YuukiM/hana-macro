@@ -81,6 +81,7 @@ function register_my_menus() {
 }
 add_action( 'after_setup_theme', 'register_my_menus' );
 
+/* 画像表示処理 */
 function attachment_image($size, $type) {
     $image_field = get_field('post-image');
 
@@ -108,7 +109,7 @@ function add_custom_column( $defaults ) {
     $defaults['post-image'] = '画像'; //項目名
     return $defaults;
 }
-add_filter('manage_posts_columns', 'add_custom_column'); //ここでの’blog’はカスタム投稿タイプ
+add_filter('manage_posts_columns', 'add_custom_column');
 
 function add_custom_column_id($column_name, $id) {
     if ($column_name == 'post-image') {
@@ -117,4 +118,4 @@ function add_custom_column_id($column_name, $id) {
         echo '<img src="'.$url[0].'" width="100" height="100">';
     }
 }
-add_action('manage_posts_custom_column', 'add_custom_column_id', 10, 2); //ここでの’blog’はカスタム投稿タイプ
+add_action('manage_posts_custom_column', 'add_custom_column_id', 10, 2);
