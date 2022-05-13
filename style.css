@@ -142,17 +142,11 @@ html {
 
 body {
     color: #707070;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN","Hiragino Sans", Meiryo, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     text-underline-offset: 0.2em;
     background-color: #fbfbfb;
-}
-@font-face {
-    src: url("fonts/NotoSansJP-Light.woff") format("woff");
-    font-family: "Noto Sans JP";
-    font-style: normal;
-    font-display: swap;
 }
 
 img {
