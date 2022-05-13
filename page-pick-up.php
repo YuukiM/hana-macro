@@ -23,7 +23,7 @@
             ?>
                     <li>
                         <a href="<?php the_permalink(); ?>">
-                            <?php attachment_image('medium', 'img'); ?>
+                            <img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title().'のマクロ写真'; ?>" title="<?php echo get_the_title().'のマクロ写真'; ?>" loading="lazy">
                         </a>
                     </li>
                 <?php endwhile;?>
