@@ -20,7 +20,7 @@
                     while ( $the_query->have_posts() ) :
                         $the_query->the_post();
                         ?>
-                        <img src="<?php attachment_image('full', 'url'); ?>" srcset="<?php attachment_image('large', 'url'); ?> 1000w, <?php attachment_image('full', 'url'); ?> 1920w," alt="" loading="lazy">
+                        <img src="<?php attachment_image('full', 'url'); ?>" srcset="<?php attachment_image('large', 'url'); ?> 1000w, <?php attachment_image('full', 'url'); ?> 1920w," alt="" width="1920" height="1440">
                     <?php endwhile;?>
                 <?php else : ?>
                     <li>ピックアップはありません。</li>
