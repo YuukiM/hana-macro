@@ -8,10 +8,11 @@ function enqueue_scripts(){
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 // jQueryカット
-function deregister_scripts() {
+// 一時停止中 フォームが動かないので
+/*function deregister_scripts() {
     wp_deregister_script( 'jquery' );
 }
-add_action( 'wp_enqueue_scripts', 'deregister_scripts' );
+add_action( 'wp_enqueue_scripts', 'deregister_scripts' );*/
 
 
 // アイキャッチ画像を有効にする。
