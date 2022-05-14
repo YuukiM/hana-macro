@@ -14,15 +14,12 @@
 .slick-slider
 {
     position: relative;
-
     display: block;
     box-sizing: border-box;
-
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
     -webkit-touch-callout: none;
     -khtml-user-select: none;
     -ms-touch-action: pan-y;
@@ -33,10 +30,8 @@
 .slick-list
 {
     position: relative;
-
     display: block;
     overflow: hidden;
-
     margin: 0;
     padding: 0;
 }
@@ -765,6 +760,37 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 }
 
 
+/*
+    Pagination
+*/
+
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.page-numbers li a,
+.page-numbers li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--main-colour);
+    border-radius: 50%;
+}
+
+.page-numbers li a {
+    color: var(--main-colour);
+}
+
+.page-numbers li .current {
+    color: #fff;
+    background-color: var(--main-colour);
+}
+
 
 /*
     Tablet
@@ -1015,6 +1041,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 
     .common-image-list {
         gap: 24px;
+        margin-bottom: 60px;
     }
 
     .common-image-list li {
@@ -1101,6 +1128,25 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     .download-button:hover {
         background-color: #ffffff;
         color: var(--download-colour);
+    }
+
+    .page-numbers {
+        gap: 20px;
+    }
+
+    .page-numbers li a,
+    .page-numbers li span {
+        width: 40px;
+        height: 40px;
+    }
+
+    .page-numbers li a {
+        color: var(--main-colour);
+    }
+
+    .page-numbers li .current {
+        color: #fff;
+        background-color: var(--main-colour);
     }
 
 
