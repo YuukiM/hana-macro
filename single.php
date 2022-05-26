@@ -12,7 +12,7 @@
                             $tags = get_the_tags();
                             foreach ( $tags as $tag ):
                         ?>
-                            <li><a href="<?php echo get_tag_link( $tag->term_id); ?>"><?php echo $tag->name; ?></a></li>
+                            <li><a href="<?php echo get_tag_link( $tag->term_id); ?>"><i class="fa-solid fa-tag"></i><?php echo $tag->name; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                     <div class="single-item__text">
