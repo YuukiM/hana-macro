@@ -606,6 +606,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 
 .single-item__tags li a i {
     margin-right: 5px;
+    display: block;
 }
 
 .download-button {
