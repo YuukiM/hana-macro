@@ -27,7 +27,7 @@
                     </li>
                 <?php endwhile;?>
             <?php else : ?>
-                <li>新しい記事はありません。</li>
+                <li>「<?php single_tag_title(); ?>」の写真はありません。</li>
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
         </ul>
