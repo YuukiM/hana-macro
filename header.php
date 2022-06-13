@@ -55,7 +55,17 @@
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="<?php echo get_the_title().'のマクロ写真' ?>" />
                 <meta property="og:description" content="<?php echo get_the_title().'のマクロ写真を無料ダウンロード' ?>" />
-                <meta property="og:site_name" content=""<?php bloginfo('name'); ?>" />
+                <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+                <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
+            <?php endwhile;?>
+            <?php endif; ?>
+            <?php elseif( is_tag() ): ?>
+            <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="<?php single_tag_title(); echo 'の花のマクロ写真' ?>" />
+                <meta property="og:description" content="<?php single_tag_title(); echo "の花のマクロ写真を無料ダウンロード" ?>" />
+                <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
                 <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
             <?php endwhile;?>
             <?php endif; ?>
@@ -63,7 +73,7 @@
             <meta property="og:type" content="article" />
             <meta property="og:title" content="お探しのページは見つかりませんでした。" />
             <meta property="og:description" content="<?php bloginfo( 'description' ); ?>" />
-            <meta property="og:site_name" content=""<?php bloginfo('name'); ?>" />
+            <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
             <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
         <?php else: ?>
             <meta property="og:type" content=" article" />
