@@ -59,12 +59,22 @@
                 <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
             <?php endwhile;?>
             <?php endif; ?>
-            <?php elseif( is_tag() ): ?>
+        <?php elseif( is_tag() ): ?>
             <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content="<?php single_tag_title(); echo 'の花のマクロ写真' ?>" />
+                <meta property="og:title" content="<?php single_tag_title(); echo 'の花の一覧' ?>" />
                 <meta property="og:description" content="<?php single_tag_title(); echo "の花のマクロ写真を無料ダウンロード" ?>" />
+                <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+                <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
+            <?php endwhile;?>
+            <?php endif; ?>
+        <?php elseif( is_category() ): ?>
+            <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="<?php single_cat_title(); echo 'に咲く花の一覧' ?>" />
+                <meta property="og:description" content="<?php single_tag_title(); echo "に咲く花のマクロ写真を無料ダウンロード" ?>" />
                 <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
                 <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
             <?php endwhile;?>
@@ -101,8 +111,11 @@
         <title><?php echo get_the_title().'のマクロ写真' ?> | <?php bloginfo('name'); ?></title>
         <meta name="description" content="<?php echo get_the_title()."のマクロ写真を無料ダウンロード" ?>" />
     <?php elseif( is_tag() ): ?>
-        <title><?php single_tag_title(); echo 'の花のマクロ写真' ?> | <?php bloginfo('name'); ?></title>
+        <title><?php single_tag_title(); echo 'の花の一覧' ?> | <?php bloginfo('name'); ?></title>
         <meta name="description" content="<?php single_tag_title(); echo "の花のマクロ写真を無料ダウンロード" ?>" />
+    <?php elseif( is_category() ): ?>
+        <title><?php single_cat_title(); echo 'に咲く花の一覧' ?> | <?php bloginfo('name'); ?></title>
+        <meta name="description" content="<?php single_tag_title(); echo "に咲く花のマクロ写真を無料ダウンロード" ?>" />
     <?php elseif( is_404() ): ?>
         <title>お探しのページは見つかりませんでした | <?php bloginfo('name'); ?></title>
         <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
