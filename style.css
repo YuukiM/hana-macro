@@ -609,6 +609,71 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     display: block;
 }
 
+.single-item__seasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0 32px;
+}
+
+.single-item__seasons li a {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.single-item__seasons li a:hover {
+    background-color: #fff;
+}
+
+.season-spring a {
+    border: 1px solid #e98fda;
+    background-color: #e98fda;
+}
+
+.season-spring a:hover {
+    color: #e98fda;
+}
+
+.season-early-summer a {
+    border: 1px solid #aecc5b;
+    background-color: #aecc5b;
+}
+
+.season-early-summer a:hover {
+    color: #aecc5b;
+}
+
+.season-summer a {
+    border: 1px solid #7dcc5b;
+    background-color: #7dcc5b;
+}
+
+.season-summer a:hover {
+    color: #7dcc5b;
+}
+
+.season-autumn a {
+    border: 1px solid #cc9f5b;
+    background-color: #cc9f5b;
+}
+
+.season-autumn a:hover {
+    color: #cc9f5b;
+}
+
+.season-winter a {
+    border: 1px solid #5b9fcc;
+    background-color: #5b9fcc;
+}
+
+.season-winter a:hover {
+    color: #5b9fcc;
+}
+
 .download-button {
     display: flex;
     justify-content: space-between;

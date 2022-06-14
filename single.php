@@ -15,6 +15,14 @@
                             <li><a href="<?php echo get_tag_link( $tag->term_id); ?>"><i class="fa-solid fa-tag"></i><?php echo $tag->name; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
+                    <ul class="single-item__seasons">
+                        <?php
+                            $categories = get_the_category();
+                            foreach ($categories as $category ):
+                        ?>
+                            <li class="season-<?php echo $category->slug; ?>"><a href="<?php echo get_category_link( $category->term_id); ?>"><?php echo $category->name; ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
                     <div class="single-item__text">
                         <?php the_content(); ?>
                     </div>
