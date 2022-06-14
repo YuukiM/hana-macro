@@ -74,7 +74,7 @@
             <?php while ( have_posts() ) : the_post(); ?>
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="<?php single_cat_title(); echo 'に咲く花の一覧' ?>" />
-                <meta property="og:description" content="<?php single_tag_title(); echo "に咲く花のマクロ写真を無料ダウンロード" ?>" />
+                <meta property="og:description" content="<?php single_cat_title(); echo "に咲く花のマクロ写真を無料ダウンロード" ?>" />
                 <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
                 <meta property="og:image" content="<?php attachment_image('full', 'url'); ?>" />
             <?php endwhile;?>
