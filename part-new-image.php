@@ -16,7 +16,7 @@
         ?>
                 <li>
                     <a href="<?php the_permalink(); ?>">
-                        <img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title().'のマクロ写真'; ?>" title="<?php echo get_the_title().'のマクロ写真'; ?>" width="400" height="300" loading="lazy">
+                        <img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" title="<?php echo get_the_title();title_postfix(); ?>" width="400" height="300" loading="lazy">
                     </a>
                 </li>
             <?php endwhile;?>

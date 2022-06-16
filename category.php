@@ -5,7 +5,7 @@
         $cat_slug = $post_obj->slug;  //タグアーカイブページスラッグ
     ?>
     <section class="new-items common-section">
-        <h1 class="information__heading section-heading"><?php single_cat_title( '', true ); ?>に咲く花のマクロ写真</h1>
+        <h1 class="information__heading section-heading"><?php single_cat_title( '', true ); ?>に咲く花の写真</h1>
         <ul class="common-image-list">
             <?php
                 $the_query = new WP_Query(
@@ -28,7 +28,7 @@
                     </li>
                 <?php endwhile;?>
             <?php else : ?>
-                <li><?php single_cat_title( '', true ); ?>に咲く花のマクロ写真はありません。</li>
+                <li><?php single_cat_title( '', true ); ?>に咲く花の写真はありません。</li>
             <?php endif; ?>
         </ul>
         <?php the_posts_pagination(

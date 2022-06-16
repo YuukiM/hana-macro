@@ -113,6 +113,21 @@ function attachment_image($size, $type) {
     }
 }
 
+
+/* マクロ写真かどうかでタイトルの後ろのテキストを変える */
+function title_postfix() {
+    $is_not_macro = get_field('non-macro');
+    if ($is_not_macro[0] == 'nonMacro') {
+        //マクロ写真じゃないとき
+        echo 'の写真';
+    } else {
+        //マクロ写真の時
+        echo 'のマクロ写真';
+    }
+}
+
+
+
 /* 管理画面での表示項目追加 */
 function add_custom_column( $defaults ) {
     $defaults['post-image'] = '画像'; //項目名
