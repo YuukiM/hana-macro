@@ -7,6 +7,7 @@
                         <?php echo get_the_title();title_postfix(); ?>
                     </h1>
                     <img src="<?php attachment_image('large', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" title="<?php echo get_the_title();title_postfix(); ?>" width="400" height="300">
+                    <?php echo do_shortcode('[wp_ulike]'); ?>
                     <ul class="single-item__tags">
                         <?php
                             $tags = get_the_tags();
