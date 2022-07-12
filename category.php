@@ -22,9 +22,7 @@
                     $the_query->the_post();
                 ?>
                     <li>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php attachment_image('medium', 'img'); ?>
-                        </a>
+                        <a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')"  title="<?php echo get_the_title();title_postfix(); ?>"></a>
                     </li>
                 <?php endwhile;?>
             <?php else : ?>

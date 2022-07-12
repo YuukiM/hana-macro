@@ -2,7 +2,7 @@
     Theme Name: Hana Macro Theme
     Description: 花マクロワールドのテーマ
     Author: 宮崎祐樹
-    Version: 1.45
+    Version: 1.60
 */
 
 @charset "UTF-8";
@@ -358,6 +358,11 @@ header .site-title a {
 
 .common-image-list li a {
     display: block;
+    aspect-ratio: 4/3;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #efefef;
 }
 
 /*

@@ -10,9 +10,7 @@
                     while(have_posts()): the_post();
                 ?>
                     <li>
-                        <a href="<?php echo get_the_permalink(); ?>">
-                            <img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" title="<?php echo get_the_title();title_postfix(); ?>" width="400" height="300" loading="lazy">
-                        </a>
+                        <a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')"  title="<?php echo get_the_title();title_postfix(); ?>"></a>
                     </li>
                 <?php endwhile; ?>
             </ul>

@@ -31,8 +31,7 @@ Notes:
 	    while ( have_posts() ) : the_post();
 	?>
 	<li>
-        <a href="<?php the_permalink(); ?>" rel="bookmark norewrite" title="<?php the_title_attribute(); ?>" >
-            <img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" title="<?php echo get_the_title();title_postfix(); ?>" width="400" height="300" loading="lazy">
+        <a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')" rel="bookmark norewrite" title="<?php echo get_the_title();title_postfix(); ?>" >
         </a><!-- (<?php the_score(); ?>)-->
     </li>
 	<?php endwhile; ?>
