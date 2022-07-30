@@ -363,6 +363,7 @@ header .site-title a {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #efefef;
+    border-radius: 5px;
 }
 
 /*
