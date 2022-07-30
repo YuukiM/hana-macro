@@ -40,7 +40,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/modaal.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
-
+    <?php wp_footer(); ?>
 </body>
-<?php wp_footer(); ?>
+
 </html>
