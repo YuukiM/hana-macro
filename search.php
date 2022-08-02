@@ -11,6 +11,7 @@
                 ?>
                     <li>
                         <a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')"  title="<?php echo get_the_title();title_postfix(); ?>"></a>
+                        <?php echo do_shortcode('[wp_ulike]'); ?>
                     </li>
                 <?php endwhile; ?>
             </ul>

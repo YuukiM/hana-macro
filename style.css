@@ -354,6 +354,7 @@ header .site-title a {
 
 .common-image-list li {
     width: calc(100%/2 - 5px);
+    position: relative;
 }
 
 .common-image-list li a {
@@ -878,6 +879,11 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     color: #fff;
     background-color: var(--main-colour);
 }
+
+/*
+    Like button (WPUlike)
+    CSS in plug-in settings screen
+*/
 
 
 /*
