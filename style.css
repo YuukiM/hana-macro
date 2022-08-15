@@ -636,6 +636,11 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     background-color: #fff;
 }
 
+.single-item__date {
+    font-size: smaller;
+    text-align: right;
+}
+
 .season-spring a {
     border: 1px solid #e98fda;
     background-color: #e98fda;

@@ -27,6 +27,7 @@
                     <div class="single-item__text">
                         <?php the_content(); ?>
                     </div>
+                    <p class="single-item__date"><?php the_date(); ?>公開</p>
                     <a href="<?php attachment_image('full', 'url'); ?>" class="download-button" download>無料ダウンロード <i class="fa-solid fa-file-arrow-down"></i></a>
                     <p class="kiyaku">
                         <a class="kiyaku-link" href="terms-of-use" target="_blank">ご利用規約</a>
