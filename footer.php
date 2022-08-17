@@ -16,9 +16,10 @@
         </section>
         <?php //スマホ用ナビ ?>
         <ul class="footer__sp-nav">
-            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa-solid fa-house-chimney footer__icon"></i><p>Home</p></a></li>
-            <li><a href="#tagModal" class="tag-modal"><i class="fa-solid fa-tags footer__icon"></i><p>Tag</p></a></li>
-            <li><a href="#searchModal" class="search-modal"><i class="fa-solid fa-magnifying-glass footer__icon"></i><p>Search</p></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="ホーム"><i class="fa-solid fa-house-chimney footer__icon"></i><p>Home</p></a></li>
+            <li><a href="seasons/" title="四季の花一覧"><i class="fa-solid fa-sun footer__icon"></i><p>Seasons</p></a></li>
+            <li><a href="#tagModal" class="tag-modal" title="タグ"><i class="fa-solid fa-tags footer__icon"></i><p>Tag</p></a></li>
+            <li><a href="#searchModal" class="search-modal" title="検索"><i class="fa-solid fa-magnifying-glass footer__icon"></i><p>Search</p></a></li>
         </ul>
     </footer>
     <div id="searchModal" style="display:none;">

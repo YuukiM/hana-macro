@@ -1,15 +1,21 @@
 <?php get_header(); ?>
-    <section class="common-section">
+    <section class="container-section">
         <h1 class="information__heading section-heading"><?php the_title(); ?></h1>
 
-        <?php
-            $categories = get_categories(array('parent' => 0)); //最上位のカテゴリーのみを取得する
-            foreach ($categories as $category):
-        ?>
-            <h2><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?></a></h2>
             <?php
-            $my_query = new WP_Query(array('cat' => $category->term_id));
-            if ($my_query->have_posts()):
+                $categories = get_categories(array('parent' => 0)); //最上位のカテゴリーのみを取得する
+                foreach ($categories as $category):
+            ?>
+            <section class="common-section">
+                <h2 class="section-heading"><a href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?>の花</a></h2>
+                <?php
+                    $my_query = new WP_Query(
+                        array(
+                            'cat' => $category->term_id,
+                            'posts_per_page' => 12
+                        )
+                    );
+                    if ($my_query->have_posts()):
                 ?>
                 <ul class="common-image-list">
                     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -20,11 +26,12 @@
                     <?php endwhile; ?>
                 </ul>
                 <?php wp_reset_postdata(); ?>
-            <?php else: ?>
-                <p>投稿はありません。</p>
-            <?php endif; ?>
-            <a class="button-primary" href="<?php echo esc_url(get_category_link($category->term_id)); ?>">もっと見る</a>
-        <?php endforeach; ?>
+                <?php else: ?>
+                    <p>投稿はありません。</p>
+                <?php endif; ?>
+                <a class="button-primary" href="<?php echo esc_url(get_category_link($category->term_id)); ?>"><?php echo $category->name; ?>の花一覧</a>
+            </section>
+            <?php endforeach; ?>
 
     </section>
 <?php get_footer(); ?>

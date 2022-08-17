@@ -132,12 +132,13 @@
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" width="180" height="35"></a>
         </h1>
         <ul class="header__nav">
-            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa-solid fa-house-chimney header__icon"></i><p>Home</p></a></li>
-            <li><a href="#tagModal" class="tag-modal"><i class="fa-solid fa-tags header__icon"></i><p>Tag</p></a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="ホーム"><i class="fa-solid fa-house-chimney header__icon"></i><p>Home</p></a></li>
+            <li><a href="seasons/" title="四季の花一覧"><i class="fa-solid fa-sun header__icon"></i><p>Seasons</p></a></li>
+            <li><a href="#tagModal" class="tag-modal" title="タグ"><i class="fa-solid fa-tags header__icon"></i><p>Tag</p></a></li>
             <?php if ( is_home() ): ?>
-                <li><a href="#"><i class="fa-solid fa-magnifying-glass header__icon"></i><p>Search</p></a></li>
+                <li><a href="#" title="検索"><i class="fa-solid fa-magnifying-glass header__icon"></i><p>Search</p></a></li>
             <?php else: ?>
-                <li><a href="#searchModal" class="search-modal"><i class="fa-solid fa-magnifying-glass header__icon"></i><p>Search</p></a></li>
+                <li><a href="#searchModal" class="search-modal" title="検索"><i class="fa-solid fa-magnifying-glass header__icon"></i><p>Search</p></a></li>
             <?php endif; ?>
         </ul>
     </header>
