@@ -1148,11 +1148,11 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     }
 
     .common-image-list li a {
-        transition: box-shadow 0.2s;
+        transition: box-shadow 0.2s ease-in-out;
     }
 
     .common-image-list li a:hover {
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
     }
 
 
