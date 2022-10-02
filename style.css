@@ -479,7 +479,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 16px;
     aspect-ratio: 21/9;
     background-size: cover;
 }
@@ -1012,6 +1012,10 @@ ul.page-numbers li .current {
 
     .feature .feature__list li {
         width: calc(100%/2 - 10px);
+    }
+
+    .feature .feature__list li a {
+        font-size: 24px;
     }
 
     /*
