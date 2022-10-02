@@ -480,6 +480,8 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     justify-content: center;
     align-items: center;
     font-size: 24px;
+    aspect-ratio: 21/9;
+    background-size: cover;
 }
 
 .feature .feature__list li a::after {
