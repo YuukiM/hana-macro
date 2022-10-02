@@ -52,6 +52,8 @@
                 </p>
             </div>
         </section>
+        <?php get_template_part('part-feature'); ?>
+
         <?php get_template_part('part-new-image'); ?>
 <?php
         /*<section class="ad-area common-section">

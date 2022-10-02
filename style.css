@@ -373,7 +373,6 @@ header .site-title a {
 .common-image-list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
     gap: 10px;
 }
 
@@ -405,7 +404,7 @@ header .site-title a {
     border-radius: 40px;
     padding: 12px 20px;
     width: 160px;
-    margin: auto;
+    margin: 60px auto 0;
     border: 1px solid var(--main-colour);
 }
 
@@ -460,6 +459,42 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     border-radius: 3px;
     color: #fff;
 }
+
+/*
+    Feature
+*/
+
+.feature {
+    background-color: #f1f1f1;
+}
+
+.feature .feature__list {
+    justify-content: center;
+}
+
+.feature .feature__list li a {
+    color: #fff;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.feature .feature__list li a::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+}
+
 
 /*
     Pick up
@@ -786,6 +821,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 }
 
 .page-section h2 {
+    margin-top: 3em;
     font-size: larger;
     font-weight: bold;
 }
@@ -888,15 +924,18 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     Pagination
 */
 
-.page-numbers {
+/* ↓ 子要素にも.page-numbersがついているので、要素名から記載 */
+
+ul.page-numbers {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.page-numbers li a,
-.page-numbers li span {
+ul.page-numbers li a,
+ul.page-numbers li span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -906,11 +945,11 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     border-radius: 50%;
 }
 
-.page-numbers li a {
+ul.page-numbers li a {
     color: var(--main-colour);
 }
 
-.page-numbers li .current {
+ul.page-numbers li .current {
     color: #fff;
     background-color: var(--main-colour);
 }
@@ -962,6 +1001,14 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     .single-item__inner {
         width: 640px;
         margin: auto;
+    }
+
+    /*
+        Feature
+    */
+
+    .feature .feature__list li {
+        width: calc(100%/2 - 10px);
     }
 
     /*
@@ -1199,7 +1246,6 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 
     .common-image-list {
         gap: 24px;
-        margin-bottom: 60px;
     }
 
     .common-image-list li {
@@ -1212,6 +1258,14 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 
     .common-image-list li a:hover {
         box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+    }
+
+    /*
+        Feature
+    */
+
+    .feature .feature__list li {
+        width: calc(100%/4 - 20px);
     }
 
 
