@@ -585,6 +585,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     box-shadow: -5px 0 10px rgba(0,0,0,0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    z-index: 100;
 }
 
 .footer__sp-nav li a {
