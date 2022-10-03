@@ -7,7 +7,7 @@
         $the_query = new WP_Query(
             array(
                 'post_type' => 'feature',
-                'posts_per_page' => 6
+                'posts_per_page' => 4
             )
         );
         if ( $the_query->have_posts() ) :
@@ -15,7 +15,7 @@
                 $the_query->the_post();
         ?>
                 <li>
-                    <a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')"  title="<?php echo get_the_title();title_postfix(); ?>">
+                    <a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')"  title="<?php echo get_the_title(); ?>">
                         <?php echo get_the_title(); ?>
                     </a>
                 </li>
