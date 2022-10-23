@@ -461,6 +461,15 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 }
 
 /*
+    About this site
+*/
+
+.about-this-site {
+    display: flex;
+    justify-content: center;
+}
+
+/*
     Feature
 */
 

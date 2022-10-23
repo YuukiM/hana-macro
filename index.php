@@ -37,7 +37,7 @@
                         <?php
                         $count_posts = wp_count_posts();
                         $num = $count_posts->publish;
-                        echo '現在、'.$num.'枚の画像を無料でお使いいただけます。';
+                        echo '現在、'.$num.'枚の画像を無料でダウンロードできます。';
                         ?>
                     </p>
                 </div>
@@ -51,6 +51,11 @@
                     <a class="top-image__kiyaku-link" href="terms-of-use">ご利用規約</a>
                 </p>
             </div>
+        </section>
+        <section class="about-this-site common-section">
+            花マクロワールドへようこそ！<br>
+            花マクロワールドは、クレジット不要で商用利用OKな写真素材サイトです。<br>
+            豊富な花の写真、マクロ写真をぜひご利用ください。
         </section>
         <?php get_template_part('part-feature'); ?>
 
