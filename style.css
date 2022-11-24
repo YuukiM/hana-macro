@@ -2,7 +2,7 @@
     Theme Name: Hana Macro Theme
     Description: 花マクロワールドのテーマ
     Author: 宮崎祐樹
-    Version: 1.60
+    Version: 1.95
 */
 
 @charset "UTF-8";
@@ -130,11 +130,12 @@
 /* Proper */
 
 :root {
-    --main-colour: #F76D86;
-    --sub-colour: #F2A7C3;
+    --main-colour: #C9437D;
+    --sub-colour: #F47D79;
     --accent-colour: #5bcc81;
     --download-colour: #ff9323;
-    --gradient: linear-gradient(to right, var(--main-colour), var(--sub-colour))
+    --gradient: linear-gradient(to right, var(--main-colour), var(--sub-colour));
+    --bg-colour: #fff0f5;
 }
 
 html {
@@ -337,7 +338,7 @@ header .site-title a {
 }
 
 .container-section .common-section:nth-of-type(2n) {
-    background-color: #f1f1f1;
+    background-color: var(--bg-colour);
 }
 
 .container-section .common-section:first-of-type {
@@ -474,7 +475,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 */
 
 .feature {
-    background-color: #f1f1f1;
+    background-color: var(--bg-colour);
 }
 
 .feature .feature__list {
@@ -512,7 +513,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 */
 
 .pick-up {
-    background-color: #f1f1f1;
+    background-color: var(--bg-colour);
 }
 
 /*
@@ -547,7 +548,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 */
 
 .footer__top {
-    background-color: #f4f4f4;
+    background-color: var(--bg-colour);
 }
 
 .footer-top-list li {
@@ -923,7 +924,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 */
 
 .in-page-search {
-    background-color: #f1f1f1;
+    background-color: var(--bg-colour);
 }
 
 .in-page-search__text {
@@ -1228,7 +1229,7 @@ ul.page-numbers li .current {
     }
 
     .container-section .common-section:nth-of-type(2n) {
-        background-color: #f1f1f1;
+        background-color: var(--bg-colour);
     }
 
     .container-section .common-section:first-of-type {
