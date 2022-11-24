@@ -151,3 +151,12 @@ function add_custom_column_id($column_name, $id) {
     }
 }
 add_action('manage_posts_custom_column', 'add_custom_column_id', 10, 2);
+
+
+//「Wordpress本体」の自動更新メール通知を停止する
+add_filter('auto_core_update_send_email' , '__return_false');
+// 「プラグイン」の自動更新メール通知を停止する
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
+
+// 「テーマ」の自動更新メール通知を停止する
+add_filter( 'auto_theme_update_send_email', '__return_false' );
