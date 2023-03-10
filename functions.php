@@ -104,15 +104,29 @@ function attachment_image($size, $type) {
     $image = wp_get_attachment_image( $image_field, $image_size, false, $img_attr );
     $url = wp_get_attachment_image_src( $image_field, $size);
 
-    if ($type == 'url') {
+    if ($type === 'url') {
         echo $url[0];
-    } elseif ($type == 'img') {
+    } elseif ($type === 'img') {
         echo $image;
     } else {
         echo $image;
     }
 }
 
+/* EXIFデータ */
+
+function image_metadata($exif) {
+  require_once ABSPATH . '/wp-admin/includes/image.php';
+  $image_field = get_field('post-image');
+  $type = get_post_mime_type( $image_field );
+  $attachment_path = get_attached_file( $image_field );
+  $metadata = wp_read_image_metadata( $attachment_path );
+  if( 'image/jpeg' == $type ){
+    if( $metadata ) {
+      return $metadata[$exif];
+    }
+  }
+}
 
 /* マクロ写真かどうかでタイトルの後ろのテキストを変える */
 function title_postfix() {

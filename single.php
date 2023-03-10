@@ -27,6 +27,17 @@
                     <div class="single-item__text">
                         <?php the_content(); ?>
                     </div>
+
+                    <?php if (image_metadata('camera')): ?>
+                      <ul class="single-item__exif">
+                        <li><?php echo image_metadata('camera'); ?></li>
+                        <li>ISO<?php echo image_metadata('iso'); ?></li>
+                        <li>F<?php echo image_metadata('aperture'); ?></li>
+                        <li>シャッター速度: <?php echo image_metadata('shutter_speed'); ?>sec.</li>
+                        <li><?php echo image_metadata('focal_length'); ?>mm</li>
+                      </ul>
+                    <?php endif; ?>
+
                     <p class="single-item__date"><?php the_date(); ?>公開</p>
                     <a href="<?php attachment_image('full', 'url'); ?>" class="download-button" download>無料ダウンロード <i class="fa-solid fa-file-arrow-down"></i></a>
                     <p class="kiyaku">

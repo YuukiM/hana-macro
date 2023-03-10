@@ -694,6 +694,10 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     display: block;
 }
 
+.single-item__exif {
+    margin-top: 16px;
+}
+
 .single-item__seasons {
     display: flex;
     flex-wrap: wrap;
