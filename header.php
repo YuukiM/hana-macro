@@ -127,7 +127,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <header class="header">
+    <header class="header js-header">
         <h1 class="site-title">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" width="180" height="35"></a>
         </h1>

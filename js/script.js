@@ -10,4 +10,12 @@ $(function(){
         speed: 1500
     });
 
+    $(window).on('scroll', function () {
+        if ($('.top-image').height() < $(this).scrollTop()) {
+            $('.js-header').addClass('change-colour');
+        } else {
+            $('.js-header').removeClass('change-colour');
+        }
+    });
+
 });
