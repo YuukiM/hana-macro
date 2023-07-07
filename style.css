@@ -129,8 +129,8 @@
 /* Proper */
 
 :root {
-    --main-colour: #c9437d;
-    --sub-colour: #f47d79;
+    --main-colour: #ce3256;
+    --sub-colour: #ce768a;
     --accent-colour: #5bcc81;
     --download-colour: #ff9323;
     --gradient: linear-gradient(to right, var(--main-colour), var(--sub-colour));
