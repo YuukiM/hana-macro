@@ -1,11 +1,10 @@
 <?php
 
 // css 読み込み
-function enqueue_scripts(){
-
-    wp_enqueue_style("style",get_stylesheet_uri());
+function enqueue_styles(){
+	wp_enqueue_style('style', get_stylesheet_uri(), array(), filemtime( get_theme_file_path( 'style.css' ) ));
 }
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_styles');
 
 // jQueryカット
 // 一時停止中 フォームが動かないので
