@@ -138,7 +138,7 @@
             <li><a href="seasons/" title="四季の花一覧"><i class="fa-solid fa-sun header__icon"></i><p>四季の花</p></a></li>
             <li><a href="#tagModal" class="tag-modal" title="タグ"><i class="fa-solid fa-tags header__icon"></i><p>タグ</p></a></li>
             <?php if ( is_home() ): ?>
-                <li><a href="#" title="検索"><label for="s"><i class="fa-solid fa-magnifying-glass header__icon"></i></label><p>検索</p></a></li>
+                <li><a href="#" class="js-home-search" title="検索"><label for="s"><i class="fa-solid fa-magnifying-glass header__icon"></i></label><p>検索</p></a></li>
             <?php else: ?>
                 <li><a href="#searchModal" class="search-modal" title="検索"><i class="fa-solid fa-magnifying-glass header__icon"></i><p>検索</p></a></li>
             <?php endif; ?>

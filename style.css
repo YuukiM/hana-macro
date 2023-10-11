@@ -339,6 +339,34 @@ header .site-title .d {
     margin-bottom: 10px;
 }
 
+.search-flash {
+    animation: searchFlash 3s ease-in 0.1s normal;
+}
+
+@keyframes searchFlash{
+    0% {
+        box-shadow: 0 0 0 var(--white);
+    }
+    17% {
+        box-shadow: 0 0 20px var(--white);
+    }
+    34% {
+        box-shadow: 0 0 0 var(--white);
+    }
+    51% {
+        box-shadow: 0 0 20px var(--white);
+    }
+    68% {
+        box-shadow: 0 0 0 var(--white);
+    }
+    85% {
+        box-shadow: 0 0 20px var(--white);
+    }
+    100% {
+        box-shadow: 0 0 0 var(--white);
+    }
+}
+
 /*
     Content
 */

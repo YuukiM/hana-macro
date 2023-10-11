@@ -18,4 +18,11 @@ $(function(){
         }
     });
 
+    let $searchArea = $('.search-area');
+    $('.js-home-search').on('click', function() {
+        $searchArea.addClass('search-flash');
+        setTimeout(function () {
+            $searchArea.removeClass('search-flash');
+        }, 3500);
+    });
 });
