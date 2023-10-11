@@ -95,7 +95,7 @@ function attachment_image($size, $type) {
 
     $image_size = $size; // (thumbnail, medium, large, full or custom size)
     $img_attr = array(
-        'src'   => $src,	// アイキャッチ画像の URL
+        //'src'   => $src,	// アイキャッチ画像の URL
         'class' => "attachment-$image_size",	// 指定した大きさ
         'alt'   => get_the_title().'のマクロ写真',	// アイキャッチ画像の抜粋
         'title' => get_the_title().'のマクロ写真',	// アイキャッチ画像のタイトル
@@ -130,7 +130,7 @@ function image_metadata($exif) {
 /* マクロ写真かどうかでタイトルの後ろのテキストを変える */
 function title_postfix() {
     $is_not_macro = get_field('non-macro');
-    if ($is_not_macro[0] == 'nonMacro') {
+    if ($is_not_macro == 'nonMacro') {
         //マクロ写真じゃないとき
         echo 'の写真';
     } else {
@@ -138,7 +138,6 @@ function title_postfix() {
         echo 'のマクロ写真';
     }
 }
-
 
 
 /* 管理画面での表示項目追加 */

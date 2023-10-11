@@ -1,6 +1,6 @@
 <section class="pick-up common-section">
     <h2 class="pick-up__heading section-heading">
-        Pick up
+        ピックアップ
     </h2>
     <ul class="pick-up__list common-image-list">
         <?php
