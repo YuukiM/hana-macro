@@ -5,7 +5,7 @@
         $cat_slug = $post_obj->slug;  //タグアーカイブページスラッグ
     ?>
     <section class="new-items common-section">
-        <h1 class="information__heading section-heading"><?php single_cat_title( '', true ); ?>に咲く花の写真</h1>
+        <h1 class="information__heading section-heading"><?php single_cat_title( '', true ); ?>の花の写真</h1>
         <ul class="common-image-list">
             <?php
                 $the_query = new WP_Query(

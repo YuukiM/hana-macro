@@ -26,7 +26,7 @@
 									</div>
 									<?php endwhile;?>
 							<?php else : ?>
-									<li>ピックアップはありません。</li>
+									<p>ピックアップはありません。</p>
 							<?php endif; ?>
 							<?php wp_reset_postdata(); ?>
 

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <?php if ( is_home() ): ?>
         <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#">
     <?php else: ?>
         <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# article: http://ogp.me/ns/article#">
     <?php endif; ?>
+						<meta charset="UTF-8">
+						<meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@myuuki_design" />
             <meta property="og:url" content="<?php echo (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]; ?>" />
@@ -135,7 +132,7 @@
         </h1>
         <ul class="header__nav">
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="ホーム"><i class="fa-solid fa-house-chimney header__icon"></i><p>ホーム</p></a></li>
-            <li><a href="seasons/" title="四季の花一覧"><i class="fa-solid fa-sun header__icon"></i><p>四季の花</p></a></li>
+            <li><a href="<?php echo esc_url( home_url() ); ?>/seasons/" title="四季の花一覧"><i class="fa-solid fa-sun header__icon"></i><p>四季の花</p></a></li>
             <li><a href="#tagModal" class="tag-modal" title="タグ"><i class="fa-solid fa-tags header__icon"></i><p>タグ</p></a></li>
             <?php if ( is_home() ): ?>
                 <li><a href="#" class="js-home-search" title="検索"><label for="s"><i class="fa-solid fa-magnifying-glass header__icon"></i></label><p>検索</p></a></li>

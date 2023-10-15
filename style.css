@@ -231,7 +231,7 @@ header .site-title .d {
     height: 60vh;
     object-fit: cover;
     object-position: center;
-    filter: brightness(0.6);
+    filter: brightness(0.9);
     border-radius: 20px;
 }
 
@@ -391,10 +391,6 @@ header .site-title .d {
     background-color: var(--bg-colour);
 }
 
-.container-section .common-section:first-of-type {
-    padding: 0 20px 40px;
-}
-
 .container-section .common-section:last-of-type {
     padding: 40px 20px 0;
 }
@@ -440,7 +436,7 @@ header .site-title .d {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #efefef;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /*
@@ -454,7 +450,8 @@ header .site-title .d {
     color: var(--main-colour);
     border-radius: 40px;
     padding: 12px 20px;
-    width: 160px;
+    width: fit-content;
+    gap: 16px;
     margin: 60px auto 0;
     border: 2px solid var(--main-colour);
 }
@@ -554,7 +551,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /*
@@ -890,7 +887,8 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     transition: 0.2s;
 }
 
-.wp-block-tag-cloud a:hover {
+.wp-block-tag-cloud a:hover,
+.wp-block-tag-cloud a:focus {
     background-color: transparent;
 }
 
@@ -1283,7 +1281,7 @@ ul.page-numbers li .current {
 
     .button-primary {
         font-size: 20px;
-        width: 170px;
+        width: fit-content;
         transition: background-color 0.2s;
     }
 
@@ -1350,10 +1348,6 @@ ul.page-numbers li .current {
         background-color: var(--bg-colour);
     }
 
-    .container-section .common-section:first-of-type {
-        padding: 0 40px 80px;
-    }
-
     .container-section .common-section:last-of-type {
         padding: 80px 40px 0;
     }
@@ -1391,7 +1385,8 @@ ul.page-numbers li .current {
         transition: box-shadow 0.2s ease-in-out;
     }
 
-    .common-image-list li a:hover {
+    .common-image-list li a:hover,
+    .common-image-list li a:focus {
         box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
     }
 
