@@ -2,14 +2,6 @@ $(function(){
     $(".search-modal").modaal();
     $(".tag-modal").modaal();
 
-    $(window).on('scroll', function () {
-        if ($('.top-image').height() < $(this).scrollTop()) {
-            $('.js-header').addClass('change-colour');
-        } else {
-            $('.js-header').removeClass('change-colour');
-        }
-    });
-
     let $searchArea = $('.search-area');
     $('.js-home-search').on('click', function() {
         $searchArea.addClass('search-flash');

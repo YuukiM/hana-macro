@@ -576,7 +576,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    color: #333333;
+    color: #642032;
 }
 
 .footer__sp-nav li p {
@@ -1087,24 +1087,6 @@ ul.page-numbers li .current {
         background-color: rgba(255,255,255,0.8);
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
-    }
-
-    .home header.change-colour {
-        background: var(--main-colour);
-        transition: 0.2s;
-    }
-
-    .home header.change-colour {
-        .site-title .d {
-            fill: var(--white);
-        }
-        .header__nav li p {
-            color: var(--white);
-        }
-
-        .header__icon {
-            color: var(--white);
-        }
     }
 
     header .site-title {
