@@ -8,6 +8,7 @@
                     </h1>
                     <img src="<?php attachment_image('large', 'url'); ?>" class="single-item__image" alt="<?php echo get_the_title();title_postfix(); ?>" title="<?php echo get_the_title();title_postfix(); ?>" width="400" height="300">
                     <?php echo do_shortcode('[wp_ulike]'); ?>
+										<?php if(get_the_tags()) { ?>
                     <ul class="single-item__tags">
                         <?php
                             $tags = get_the_tags();
@@ -16,6 +17,7 @@
                             <li><a href="<?php echo get_tag_link( $tag->term_id); ?>"><i class="fa-solid fa-tag"></i><?php echo $tag->name; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
+										<?php } ?>
                     <ul class="single-item__seasons">
                         <?php
                             $categories = get_the_category();
