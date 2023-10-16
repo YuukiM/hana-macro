@@ -997,9 +997,11 @@ ul.page-numbers li .current {
     }
 
     .single-item__inner {
-        width: 640px;
+        max-width: 800px;
+        height: auto;
         margin: auto;
     }
+
 
     /*
         Feature

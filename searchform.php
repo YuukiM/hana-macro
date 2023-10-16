@@ -1,7 +1,7 @@
 <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
     <label class="search-area">
         <input type="text" name="s" id="s" class="search-area__text" placeholder=""/>
-        <button type="submit" class="search-area__button">
+        <button type="submit" class="search-area__button" aria-label="検索">
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
     </label>
