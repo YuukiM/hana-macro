@@ -1,6 +1,6 @@
 <section class="new-items common-section">
     <h2 class="new-items__heading section-heading">
-        New
+        新着
     </h2>
     <ul class="new-items__list common-image-list">
         <?php

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <section class="container-section">
-        <h1 class="information__heading section-heading"><?php the_title(); ?></h1>
+        <h1 class="page-heading"><?php the_title(); ?></h1>
 
             <?php
                 $categories = get_categories(array('parent' => 0)); //最上位のカテゴリーのみを取得する

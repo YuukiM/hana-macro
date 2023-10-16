@@ -37,10 +37,6 @@
     </div>
 
     <script src="https://kit.fontawesome.com/8cd2a8b7a7.js" crossorigin="anonymous"></script>
-    <script src="<?php echo get_theme_file_uri('/js/jquery.min.js'); ?>"></script>
-    <script src="<?php echo get_theme_file_uri('/js/modaal.min.js'); ?>"></script>
-    <script src="<?php echo get_theme_file_uri('/js/slick.min.js'); ?>"></script>
-    <script src="<?php echo get_theme_file_uri('/js/script.js'); ?>"></script>
     <?php wp_footer(); ?>
 </body>
 

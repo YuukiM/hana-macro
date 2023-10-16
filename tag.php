@@ -5,7 +5,7 @@
         $tag_slug = $post_obj->slug;  //タグアーカイブページスラッグ
     ?>
     <section class="new-items common-section">
-        <h1 class="information__heading section-heading">「<?php single_tag_title(); ?>」の写真一覧</h1>
+        <h1 class="page-heading">「<?php single_tag_title(); ?>」の写真一覧</h1>
         <ul class="common-image-list">
             <?php
                 $the_query = new WP_Query(
@@ -22,9 +22,7 @@
                     $the_query->the_post();
                 ?>
                     <li>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php attachment_image('medium', 'img'); ?>
-                        </a>
+											<a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')"  title="<?php echo get_the_title();title_postfix(); ?>"></a>
                     </li>
                 <?php endwhile;?>
             <?php else : ?>

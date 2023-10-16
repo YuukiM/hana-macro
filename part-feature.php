@@ -1,6 +1,6 @@
 <section class="feature common-section">
     <h2 class="feature__heading section-heading">
-        Feature
+        特集
     </h2>
     <ul class="feature__list common-image-list">
         <?php

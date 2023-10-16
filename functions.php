@@ -1,19 +1,26 @@
 <?php
 
 // css 読み込み
-function enqueue_scripts(){
-
-    wp_enqueue_style("style",get_stylesheet_uri());
+function enqueue_styles(){
+	wp_enqueue_style('style', get_stylesheet_uri(), array(), filemtime( get_theme_file_path( 'style.css' ) ));
 }
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_styles');
 
 // jQueryカット
 // 一時停止中 フォームが動かないので
-/*function deregister_scripts() {
-    wp_deregister_script( 'jquery' );
-}
-add_action( 'wp_enqueue_scripts', 'deregister_scripts' );*/
+if(!is_admin()) {
+	function my_scripts()
+	{
+		wp_deregister_script('jquery');
+		wp_deregister_script('jquery-migrate');
+		wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery.min.js', array(), '3.7.1', false);
+		wp_enqueue_script('modaal', get_template_directory_uri().'/js/modaal.min.js', array(), '0.4.4', true);
+		wp_enqueue_script('slick', get_template_directory_uri().'/js/slick.min.js', array(), '1.0', true);
+		wp_enqueue_script('script', get_template_directory_uri().'/js/script.js', array(), '1.0', true);
+	}
 
+	add_action('wp_enqueue_scripts', 'my_scripts');
+}
 
 // アイキャッチ画像を有効にする。
 add_theme_support('post-thumbnails');
@@ -96,7 +103,7 @@ function attachment_image($size, $type) {
 
     $image_size = $size; // (thumbnail, medium, large, full or custom size)
     $img_attr = array(
-        'src'   => $src,	// アイキャッチ画像の URL
+        //'src'   => $src,	// アイキャッチ画像の URL
         'class' => "attachment-$image_size",	// 指定した大きさ
         'alt'   => get_the_title().'のマクロ写真',	// アイキャッチ画像の抜粋
         'title' => get_the_title().'のマクロ写真',	// アイキャッチ画像のタイトル
@@ -131,7 +138,7 @@ function image_metadata($exif) {
 /* マクロ写真かどうかでタイトルの後ろのテキストを変える */
 function title_postfix() {
     $is_not_macro = get_field('non-macro');
-    if ($is_not_macro[0] == 'nonMacro') {
+    if ($is_not_macro == 'nonMacro') {
         //マクロ写真じゃないとき
         echo 'の写真';
     } else {
@@ -139,7 +146,6 @@ function title_postfix() {
         echo 'のマクロ写真';
     }
 }
-
 
 
 /* 管理画面での表示項目追加 */

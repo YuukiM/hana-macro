@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section class="common-section">
-    <h1 class="section-heading">お探しのページは見つかりませんでした。</h1>
+    <h1 class="page-heading">お探しのページは見つかりませんでした。</h1>
 </section>
 <section class="in-page-search common-section">
     <p class="in-page-search__text">

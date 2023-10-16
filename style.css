@@ -136,6 +136,14 @@
     --gradient: linear-gradient(to right, var(--main-colour), var(--sub-colour));
     --gradient-white: linear-gradient(to right, #fff, #fff);
     --bg-colour: #fff0f5;
+    --white: #fff;
+}
+
+@font-face {
+    src: url("fonts/KaiseiOpti-Regular.woff2") format("woff2"), url("fonts/KaiseiOpti-Regular.woff") format("woff"), url("fonts/KaiseiOpti-Regular.ttf") format("ttf");
+    font-family: "Kaisei Opti";
+    font-style: normal;
+    font-display: swap;
 }
 
 html {
@@ -174,7 +182,9 @@ input,
 
 header {
     padding: 16px;
-    background: var(--main-colour);
+    background-color: rgba(255,255,255,0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 header .site-title {
@@ -190,6 +200,10 @@ header .site-title a {
     display: block;
 }
 
+header .site-title .d {
+    fill: var(--main-colour);
+}
+
 .header__nav {
     display: none;
 }
@@ -200,32 +214,25 @@ header .site-title a {
 
 .top-image {
     position: relative;
-    height: 350px;
-}
-
-.top-image::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.2);
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+    height: 60vh;
+    width: 95%;
+    border-radius: 20px;
+    margin: auto;
 }
 
 .top-image__slider {
     position: absolute;
     width: 100%;
-    height: 350px;
+    height: 60vh;
     overflow: hidden;
 }
 
 .top-image__slider img {
-    height: 350px;
+    height: 60vh;
     object-fit: cover;
     object-position: center;
+    filter: brightness(0.9);
+    border-radius: 20px;
 }
 
 .top-image__texts {
@@ -249,18 +256,13 @@ header .site-title a {
 }
 
 .top-image__heading {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  text-shadow: 5px 1px 10px rgba(0,0,0,0.2);
-  font-family: "Kaisei Opti", serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 5px 1px 10px rgba(0,0,0,0.2);
+    font-family: "Kaisei Opti", serif;
 }
-@font-face {
-    src: url("fonts/KaiseiOpti-Regular.woff") format("woff");
-    font-family: "Kaisei Opti";
-    font-style: normal;
-    font-display: swap;
-}
+
 
 .top-image__lead {
     font-size: 14px;
@@ -271,6 +273,26 @@ header .site-title a {
     text-decoration: underline;
 }
 
+.top-image__url {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    z-index: 100;
+    right: 25px;
+    bottom: 20px;
+    color: var(--white);
+}
+
+.top-image__url::after {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    rotate: 45deg;
+}
 
 /*
     Search Area
@@ -317,6 +339,34 @@ header .site-title a {
     margin-bottom: 10px;
 }
 
+.search-flash {
+    animation: searchFlash 3s ease-in 0.1s normal;
+}
+
+@keyframes searchFlash{
+    0% {
+        box-shadow: 0 0 0 var(--white);
+    }
+    17% {
+        box-shadow: 0 0 20px var(--white);
+    }
+    34% {
+        box-shadow: 0 0 0 var(--white);
+    }
+    51% {
+        box-shadow: 0 0 20px var(--white);
+    }
+    68% {
+        box-shadow: 0 0 0 var(--white);
+    }
+    85% {
+        box-shadow: 0 0 20px var(--white);
+    }
+    100% {
+        box-shadow: 0 0 0 var(--white);
+    }
+}
+
 /*
     Content
 */
@@ -341,10 +391,6 @@ header .site-title a {
     background-color: var(--bg-colour);
 }
 
-.container-section .common-section:first-of-type {
-    padding: 0 20px 40px;
-}
-
 .container-section .common-section:last-of-type {
     padding: 40px 20px 0;
 }
@@ -359,12 +405,12 @@ header .site-title a {
 }
 
 .section-heading {
-  color: var(--main-colour);
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
-  text-transform: uppercase;
+    color: var(--main-colour);
+    font-size: 32px;
+    font-weight: 400;
+    font-family: "Kaisei Opti", serif;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 /*
@@ -375,6 +421,7 @@ header .site-title a {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin-top: 40px;
 }
 
 .common-image-list li {
@@ -389,7 +436,7 @@ header .site-title a {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #efefef;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /*
@@ -400,21 +447,21 @@ header .site-title a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--gradient);
-    color: #fff;
+    color: var(--main-colour);
     border-radius: 40px;
     padding: 12px 20px;
-    width: 160px;
+    width: fit-content;
+    gap: 16px;
     margin: 60px auto 0;
-    border: 1px solid transparent;
+    border: 2px solid var(--main-colour);
 }
 
 .button-primary::after {
     content: "";
     width: 10px;
     height: 10px;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border-top: 2px solid var(--main-colour);
+    border-right: 2px solid var(--main-colour);
     transform: rotate(45deg);
 }
 
@@ -504,7 +551,19 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     top: 0;
     left: 0;
     z-index: -1;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+/*
+    ページ
+*/
+
+.page-heading {
+    color: var(--main-colour);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -521,12 +580,15 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 */
 
 .information-list {
-    margin: 0 auto 40px;
+    display: grid;
+    gap: 16px;
+    margin: 40px auto;
     max-width: 640px;
 }
 
 .information-list li {
-    padding-bottom: 16px;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted #aaa;
 }
 
 .information-list li a{
@@ -664,6 +726,15 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
 
 .single-item__heading {
     text-align: left;
+    color: var(--main-colour);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.single-item__image {
+    margin-top: 24px;
+    border-radius: 10px;
 }
 
 .single-item__tags {
@@ -816,7 +887,8 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     transition: 0.2s;
 }
 
-.wp-block-tag-cloud a:hover {
+.wp-block-tag-cloud a:hover,
+.wp-block-tag-cloud a:focus {
     background-color: transparent;
 }
 
@@ -1009,6 +1081,7 @@ ul.page-numbers li .current {
 
     .common-image-list {
         gap: 15px;
+        margin-top: 80px;
     }
 
     .common-image-list li {
@@ -1099,15 +1172,31 @@ ul.page-numbers li .current {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        padding: 16px 1.2%;
     }
 
     .home header {
-        background: transparent;
+        background-color: rgba(255,255,255,0.8);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
     }
 
     .home header.change-colour {
         background: var(--main-colour);
         transition: 0.2s;
+    }
+
+    .home header.change-colour {
+        .site-title .d {
+            fill: var(--white);
+        }
+        .header__nav li p {
+            color: var(--white);
+        }
+
+        .header__icon {
+            color: var(--white);
+        }
     }
 
     header .site-title {
@@ -1130,16 +1219,21 @@ ul.page-numbers li .current {
         align-items: center;
         justify-content: center;
         font-size: 14px;
-        text-shadow: 0 1px 3px rgba(0,0,0,0.25);
         gap: 8px 0;
+    }
+
+    .header__nav li a label {
+        display: flex;
     }
 
     .header__nav li p {
         line-height: 1;
+        color: var(--main-colour);
     }
 
     .header__icon {
         font-size: 24px;
+        color: var(--main-colour);
     }
 
     /*
@@ -1151,7 +1245,7 @@ ul.page-numbers li .current {
     }
 
     .home main {
-        padding: 0;
+        padding: 90px 0 0 0;
     }
 
     /*
@@ -1160,6 +1254,7 @@ ul.page-numbers li .current {
 
     .top-image {
         height: 650px;
+        width: 98%;
     }
 
     .top-image__slider {
@@ -1185,20 +1280,21 @@ ul.page-numbers li .current {
     */
 
     .button-primary {
-        font-size: 24px;
-        width: 220px;
+        font-size: 20px;
+        width: fit-content;
+        transition: background-color 0.2s;
     }
 
     .button-primary:hover {
-        background: var(--gradient-white);
-        color: var(--main-colour);
-        border: 1px solid var(--main-colour);
+        background-color: var(--main-colour);
+        color: var(--white);
     }
+
 
     .button-primary:hover::after {
         transition: border 0.2s;
-        border-top: 2px solid var(--main-colour);
-        border-right: 2px solid var(--main-colour);
+        border-top: 2px solid var(--white);
+        border-right: 2px solid var(--white);
     }
 
     /*
@@ -1229,6 +1325,14 @@ ul.page-numbers li .current {
     }
 
     /*
+        ページ
+    */
+
+    .page-heading {
+        font-size: 40px;
+    }
+
+    /*
     Container section
 */
 
@@ -1244,10 +1348,6 @@ ul.page-numbers li .current {
         background-color: var(--bg-colour);
     }
 
-    .container-section .common-section:first-of-type {
-        padding: 0 40px 80px;
-    }
-
     .container-section .common-section:last-of-type {
         padding: 80px 40px 0;
     }
@@ -1257,7 +1357,7 @@ ul.page-numbers li .current {
     */
 
     .section-heading {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .common-section {
@@ -1285,7 +1385,8 @@ ul.page-numbers li .current {
         transition: box-shadow 0.2s ease-in-out;
     }
 
-    .common-image-list li a:hover {
+    .common-image-list li a:hover,
+    .common-image-list li a:focus {
         box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
     }
 
@@ -1302,6 +1403,10 @@ ul.page-numbers li .current {
         information
     */
 
+    .information-list {
+        margin: 80px auto;
+    }
+
     .information__date {
         width: 18%;
     }
@@ -1311,7 +1416,7 @@ ul.page-numbers li .current {
     }
 
     .information-list li {
-        padding-bottom: 24px;
+
     }
 
 
@@ -1353,6 +1458,10 @@ ul.page-numbers li .current {
     /*
         Single
     */
+
+    .single-item__heading {
+        font-size: 36px;
+    }
 
     .single-item__tags li a:hover {
         background-color: #ffffff;
