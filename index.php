@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 			<section class="top-image">
-					<div class="top-image__slider">
+					<div class="top-image__slider swiper js-swiper">
+						<div class="swiper-wrapper">
 							<?php
 							$the_query = new WP_Query(
 									array(
@@ -19,8 +20,8 @@
 							if ( $the_query->have_posts() ) :
 									while ( $the_query->have_posts() ) :
 											$the_query->the_post();
-											?>
-									<div>
+							?>
+									<div class="swiper-slide">
 										<img src="<?php attachment_image('full', 'url'); ?>" srcset="<?php attachment_image('large', 'url'); ?> 1000w, <?php attachment_image('full', 'url'); ?> 1920w," alt="" width="1920" height="1440">
 										<a class="top-image__url" href="<?php echo esc_url( get_permalink() ); ?>">この画像を見る</a>
 									</div>
@@ -29,7 +30,7 @@
 									<p>ピックアップはありません。</p>
 							<?php endif; ?>
 							<?php wp_reset_postdata(); ?>
-
+						</div>
 					</div>
 					<div class="top-image__texts">
 							<div class="top-image__top">
