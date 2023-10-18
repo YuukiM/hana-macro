@@ -2,6 +2,9 @@
     <h2 class="feature__heading section-heading">
         特集
     </h2>
+		<p class="section-lead">
+			お花のはなし
+		</p>
     <ul class="feature__list common-image-list">
         <?php
         $the_query = new WP_Query(

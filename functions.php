@@ -15,7 +15,6 @@ if(!is_admin()) {
 		wp_deregister_script('jquery-migrate');
 		wp_enqueue_script('jquery', get_template_directory_uri().'/js/jquery.min.js', array(), '3.7.1', false);
 		wp_enqueue_script('modaal', get_template_directory_uri().'/js/modaal.min.js', array(), '0.4.4', true);
-		//wp_enqueue_script('slick', get_template_directory_uri().'/js/slick.min.js', array(), '1.0', true);
 		wp_enqueue_script('slick', get_template_directory_uri().'/js/swiper-bundle.min.js', array(), '10.3.1', true);
 		wp_enqueue_script('script', get_template_directory_uri().'/js/script.js', array(), '1.0', true);
 	}

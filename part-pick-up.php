@@ -2,6 +2,9 @@
     <h2 class="pick-up__heading section-heading">
         ピックアップ
     </h2>
+		<p class="section-lead">
+			季節の写真
+		</p>
     <ul class="pick-up__list common-image-list">
         <?php
         $the_query = new WP_Query(

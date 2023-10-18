@@ -38,13 +38,14 @@
 
 :root {
     --main-colour: #f54e78;
-    --sub-colour: #ce768a;
+    --sub-colour: #ff9696;
     --accent-colour: #5bcc81;
     --download-colour: #ff9323;
-    --gradient: linear-gradient(to right, var(--main-colour), var(--sub-colour));
-    --gradient-white: linear-gradient(to right, #fff, #fff);
+    /*--gradient: linear-gradient(to right, var(--main-colour), var(--sub-colour));*/
+    /*--gradient-white: linear-gradient(to right, #fff, #fff);*/
     --bg-colour: #fff0f5;
     --white: #fff;
+    --font-colour: #333;
 }
 
 @font-face {
@@ -59,7 +60,7 @@ html {
 }
 
 body {
-    color: #707070;
+    color: var(--font-colour);
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN","Hiragino Sans", Meiryo, sans-serif;
     font-size: 14px;
     line-height: 1.5;
@@ -209,11 +210,11 @@ header .site-title .d {
 .search-area {
     position: relative;
     display: block;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 450px;
     border: 1px solid #ffffff;
     background-color: rgba(255,255,255,0.5);
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 10px;
     margin: 0 auto 10px;
     z-index: 1;
@@ -235,8 +236,8 @@ header .site-title .d {
     width: 80px;
     color: #fff;
     text-align: center;
-    border-radius: 0 5px 5px 0;
-    background: var(--gradient);
+    border-radius: 0 25px 25px 0;
+    background: var(--main-colour);
 }
 
 .search-area__button i {
@@ -321,6 +322,13 @@ header .site-title .d {
     text-transform: uppercase;
 }
 
+.section-lead {
+    margin-top: 4px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--sub-colour);
+}
+
 /*
     Images list
 */
@@ -329,7 +337,7 @@ header .site-title .d {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 40px;
+    margin-top: 32px;
 }
 
 .common-image-list li {
@@ -989,7 +997,7 @@ ul.page-numbers li .current {
 
     .common-image-list {
         gap: 15px;
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     .common-image-list li {
@@ -1251,6 +1259,13 @@ ul.page-numbers li .current {
     .section-heading {
         font-size: 40px;
     }
+
+    .section-lead {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+
+    .section-lead
 
     .common-section {
         padding: 80px 40px;

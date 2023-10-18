@@ -26,7 +26,7 @@
             ); ?>
         <?php endif; ?>
     <?php else: ?>
-        <h1 class="information__heading section-heading">検索キーワードにマッチする写真がありません</h1>
+        <h1 class="page-heading">検索キーワードにマッチする写真がありません</h1>
     <?php endif; ?>
 </section>
 <section class="in-page-search common-section">

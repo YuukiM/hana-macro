@@ -2,6 +2,9 @@
     <h2 class="new-items__heading section-heading">
         新着
     </h2>
+		<p class="section-lead">
+			新しい写真
+		</p>
     <ul class="new-items__list common-image-list">
         <?php
         $the_query = new WP_Query(
@@ -20,7 +23,7 @@
                 </li>
             <?php endwhile;?>
         <?php else : ?>
-            <li>新しい記事はありません。</li>
+            <li>新しい写真はありません。</li>
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
     </ul>
