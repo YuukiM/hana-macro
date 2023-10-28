@@ -14,7 +14,7 @@
                             $tags = get_the_tags();
                             foreach ( $tags as $tag ):
                         ?>
-                            <li><a href="<?php echo get_tag_link( $tag->term_id); ?>"><i class="fa-solid fa-tag"></i><?php echo $tag->name; ?></a></li>
+                            <li><a href="<?php echo get_tag_link( $tag->term_id); ?>"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M570-104q-23 23-57 23t-57-23L104-456q-11-11-17.5-26T80-514v-286q0-33 23.5-56.5T160-880h286q17 0 32 6.5t26 17.5l352 353q23 23 23 56.5T856-390L570-104Zm-57-56 286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640ZM160-800Z"/></svg><?php echo $tag->name; ?></a></li>
                         <?php endforeach; ?>
                     </ul>
 										<?php } ?>
@@ -41,7 +41,7 @@
                     <?php endif; ?>
 
                     <p class="single-item__date"><?php the_date(); ?>公開</p>
-                    <a href="<?php attachment_image('full', 'url'); ?>" class="download-button" download>無料ダウンロード <i class="fa-solid fa-file-arrow-down"></i></a>
+                    <a href="<?php attachment_image('full', 'url'); ?>" class="download-button" download>無料ダウンロード <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m720-120 160-160-56-56-64 64v-167h-80v167l-64-64-56 56 160 160ZM560 0v-80h320V0H560ZM240-160q-33 0-56.5-23.5T160-240v-560q0-33 23.5-56.5T240-880h280l240 240v121h-80v-81H480v-200H240v560h240v80H240Zm0-80v-560 560Z"/></svg></a>
                     <p class="kiyaku">
                         <a class="kiyaku-link" href="terms-of-use" target="_blank">ご利用規約</a>
                     </p>
