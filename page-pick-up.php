@@ -26,7 +26,9 @@
                     $the_query->the_post();
             ?>
                     <li>
-                        <a href="<?php the_permalink(); ?>" style="background-image: url('<?php attachment_image('medium', 'url'); ?>')"  title="<?php echo get_the_title();title_postfix(); ?>"></a>
+                        <a href="<?php the_permalink(); ?>" title="<?php echo get_the_title();title_postfix(); ?>">
+													<img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" width="300" height="225">
+												</a>
                         <?php echo do_shortcode('[wp_ulike]'); ?>
                     </li>
                 <?php endwhile;?>
