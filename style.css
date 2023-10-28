@@ -220,7 +220,8 @@ header .site-title .d {
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    color: #333333;
+    color: var(--darken-colour);
+    overflow: hidden;
 }
 
 .search-area__text {
@@ -239,8 +240,11 @@ header .site-title .d {
     background: var(--main-colour);
 }
 
-.search-area__button i {
+.search-area__button svg {
     text-shadow: 0 1px 3px var(--main-colour);
+    fill: var(--white);
+    width: 24px;
+    height: auto;
 }
 
 .search-text {
@@ -676,13 +680,23 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     background-color: var(--accent-colour);
     padding: 5px 10px;
     border-radius: 3px;
-    color: #ffffff;
+    color: var(--white);
+    transition: 0.2s;
+}
+
+.single-item__tags li a svg {
+    width: 20px;
+    fill: var(--white);
     transition: 0.2s;
 }
 
 .single-item__tags li a:hover {
-    background-color: #fff;
+    background-color: var(--white);
     color: var(--accent-colour);
+}
+
+.single-item__tags li a:hover svg {
+    fill: var(--accent-colour);
 }
 
 .single-item__tags li a i {
@@ -769,7 +783,7 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     justify-content: space-between;
     align-items: center;
     background-color: var(--download-colour);
-    color: #fff;
+    color: var(--white);
     border-radius: 40px;
     padding: 12px 20px;
     width: 220px;
@@ -778,6 +792,15 @@ div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirectio
     font-size: 18px;
     font-weight: bold;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-button svg {
+    width: 30px;
+    fill: var(--white);
+}
+
+.download-button:hover svg {
+    fill: var(--download-colour);
 }
 
 .kiyaku {
@@ -966,6 +989,10 @@ ul.page-numbers li a {
 ul.page-numbers li .current {
     color: #fff;
     background-color: var(--main-colour);
+}
+
+.page-numbers__arrow {
+    fill: var(--main-colour);
 }
 
 /*
@@ -1408,6 +1435,10 @@ ul.page-numbers li .current {
     .download-button:hover {
         background-color: #ffffff;
         color: var(--download-colour);
+    }
+
+    .download-button svg {
+        transition: 0.2s;
     }
 
     .page-numbers {

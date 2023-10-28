@@ -55,7 +55,6 @@
         <?php endif; ?>
     </div>
 
-    <script src="https://kit.fontawesome.com/8cd2a8b7a7.js" crossorigin="anonymous"></script>
     <?php wp_footer(); ?>
 </body>
 
