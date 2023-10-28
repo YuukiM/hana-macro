@@ -354,6 +354,14 @@ header .site-title .d {
     border-radius: 10px;
 }
 
+.common-image-list li a img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+}
+
 /*
     Detail button
 */
