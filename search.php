@@ -31,7 +31,7 @@
 </section>
 <section class="in-page-search common-section">
     <p class="in-page-search__text">
-        別なキーワードで検索
+        漢字やカタカナなどでもお試しください
     </p>
     <?php get_search_form(); ?>
 </section>

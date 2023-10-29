@@ -121,7 +121,6 @@ function attachment_image($size, $type) {
 }
 
 /* EXIFデータ */
-
 function image_metadata($exif) {
   require_once ABSPATH . '/wp-admin/includes/image.php';
   $image_field = get_field('post-image');
@@ -146,6 +145,15 @@ function title_postfix() {
         echo 'のマクロ写真';
     }
 }
+
+/* 検索方式を「LIKE」から「LIKE BINARY」へ変更するコード */
+	function mycus_change_LIKE_BINARY_search( $where, \WP_Query $q ) {
+		if ( $q->is_search() && $q->is_main_query() && ! $q->is_admin() ) {
+			$where = str_replace( 'LIKE', 'LIKE BINARY', $where );
+		}
+		return $where;
+	}
+	add_filter( 'posts_where', 'mycus_change_LIKE_BINARY_search', 10, 2 );
 
 
 /* 管理画面での表示項目追加 */
