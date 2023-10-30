@@ -7,6 +7,7 @@
 									array(
 											'post_type' => 'post',
 											'posts_per_page' => 12,
+											'orderby' => 'rand',
 											'meta_query' => array(
 													'relation' => 'AND',
 													array(
