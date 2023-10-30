@@ -135,9 +135,10 @@ function image_metadata($exif) {
 }
 
 /* マクロ写真かどうかでタイトルの後ろのテキストを変える */
-function title_postfix() {
+function title_postfix(): void
+{
     $is_not_macro = get_field('non-macro');
-    if ($is_not_macro == 'nonMacro') {
+    if ($is_not_macro[0] === 'nonMacro') {
         //マクロ写真じゃないとき
         echo 'の写真';
     } else {
