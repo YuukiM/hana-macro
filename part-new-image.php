@@ -19,7 +19,7 @@
         ?>
                 <li>
                     <a href="<?php the_permalink(); ?>" title="<?php echo get_the_title();title_postfix(); ?>">
-											<img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" width="300" height="225">
+											<img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" width="300" height="225" loading="lazy" decoding="async">
 										</a>
                     <?php echo do_shortcode('[wp_ulike]'); ?>
                 </li>

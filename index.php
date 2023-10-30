@@ -22,7 +22,7 @@
 											$the_query->the_post();
 							?>
 									<div class="swiper-slide">
-										<img src="<?php attachment_image('full', 'url'); ?>" srcset="<?php attachment_image('large', 'url'); ?> 1000w, <?php attachment_image('full', 'url'); ?> 1920w," alt="" width="1920" height="1440">
+										<img src="<?php attachment_image('full', 'url'); ?>" srcset="<?php attachment_image('large', 'url'); ?> 1000w, <?php attachment_image('full', 'url'); ?> 1920w," alt="" width="1920" height="1440" decoding="async">
 										<a class="top-image__url" href="<?php echo esc_url( get_permalink() ); ?>">この画像を見る</a>
 									</div>
 									<?php endwhile;?>

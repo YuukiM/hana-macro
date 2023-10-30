@@ -5,7 +5,7 @@
             $paged = get_query_var('paged') ? get_query_var('paged') : 1 ;
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 4,
+                'posts_per_page' => 48,
                 'paged' => $paged
             );
             $the_query = new WP_Query( $args );
@@ -19,7 +19,7 @@
             ?>
                 <li>
                     <a href="<?php the_permalink(); ?>" title="<?php echo get_the_title();title_postfix(); ?>">
-											<img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" width="300" height="225">
+											<img src="<?php attachment_image('medium', 'url'); ?>" alt="<?php echo get_the_title();title_postfix(); ?>" width="300" height="225" decoding="async">
                     </a>
                     <?php echo do_shortcode('[wp_ulike]'); ?>
                 </li>

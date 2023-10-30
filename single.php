@@ -6,7 +6,7 @@
                     <h1 class="single-item__heading">
                         <?php echo get_the_title();title_postfix(); ?>
                     </h1>
-                    <img src="<?php attachment_image('large', 'url'); ?>" class="single-item__image" alt="<?php echo get_the_title();title_postfix(); ?>" title="<?php echo get_the_title();title_postfix(); ?>" width="400" height="300">
+                    <img src="<?php attachment_image('large', 'url'); ?>" class="single-item__image" alt="<?php echo get_the_title();title_postfix(); ?>" title="<?php echo get_the_title();title_postfix(); ?>" width="400" height="300" decoding="async">
                     <?php echo do_shortcode('[wp_ulike]'); ?>
 										<?php if(get_the_tags()) { ?>
                     <ul class="single-item__tags">
