@@ -1191,11 +1191,13 @@ ul.page-numbers li .current {
     */
 
     main {
-        padding: 80px 0 0
+        padding: 80px 0 0;
+        min-height: calc(100vh - 80px);
     }
 
     .home main {
         padding: 90px 0 0 0;
+        min-height: calc(100vh - 90px);
     }
 
     /*
