@@ -57,23 +57,23 @@
         if (!empty($word)) {
           $search_word = $wpdb->escape("%{$word}%");
           $search .= " AND (
-						{$wpdb->posts}.post_title LIKE '{$search_word}'
-						OR {$wpdb->posts}.post_content LIKE '{$search_word}'
-						OR {$wpdb->posts}.ID IN (
-							SELECT distinct r.object_id
-							FROM {$wpdb->term_relationships} AS r
-							INNER JOIN {$wpdb->term_taxonomy} AS tt ON r.term_taxonomy_id = tt.term_taxonomy_id
-							INNER JOIN {$wpdb->terms} AS t ON tt.term_id = t.term_id
-							WHERE t.name LIKE '{$search_word}'
-						OR t.slug LIKE '{$search_word}'
-						OR tt.description LIKE '{$search_word}'
-						)
-						OR {$wpdb->posts}.ID IN (
-							SELECT distinct p.post_id
-							FROM {$wpdb->postmeta} AS p
-							WHERE p.meta_value LIKE '{$search_word}'
-						)
-				) ";
+            {$wpdb->posts}.post_title LIKE '{$search_word}'
+            OR {$wpdb->posts}.post_content LIKE '{$search_word}'
+            OR {$wpdb->posts}.ID IN (
+              SELECT distinct r.object_id
+              FROM {$wpdb->term_relationships} AS r
+              INNER JOIN {$wpdb->term_taxonomy} AS tt ON r.term_taxonomy_id = tt.term_taxonomy_id
+              INNER JOIN {$wpdb->terms} AS t ON tt.term_id = t.term_id
+              WHERE t.name LIKE '{$search_word}'
+            OR t.slug LIKE '{$search_word}'
+            OR tt.description LIKE '{$search_word}'
+          )
+          OR {$wpdb->posts}.ID IN (
+            SELECT distinct p.post_id
+            FROM {$wpdb->postmeta} AS p
+            WHERE p.meta_value LIKE '{$search_word}'
+          )
+        ) ";
         }
       }
     }

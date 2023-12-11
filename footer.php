@@ -1,20 +1,20 @@
 </main>
 <footer class="footer">
   <section class="footer__top">
-	  <?php
-		  wp_nav_menu(array(
-			  'theme_location' => 'footer-menu',
-			  'container' => false,
-			  'menu_class' => 'footer-top-list',
-		  ));
-	  ?>
+    <?php
+      wp_nav_menu(array(
+        'theme_location' => 'footer-menu',
+        'container' => false,
+        'menu_class' => 'footer-top-list',
+      ));
+    ?>
   </section>
   <section class="footer__bottom">
     <small>
       @<?php echo date('Y'); ?> Miyazaki Yûki all rights reserved.
     </small>
   </section>
-	<?php //スマホ用ナビ ?>
+  <?php //スマホ用ナビ ?>
   <ul class="footer__sp-nav">
     <li>
       <a class="footer__sp-nav-link" href="<?php echo esc_url(home_url('/')); ?>" title="ホーム">
@@ -51,17 +51,17 @@
   </ul>
 </footer>
 <div id="searchModal" style="display:none;">
-	<?php get_search_form(); ?>
+  <?php get_search_form(); ?>
   <p class="search-text">
     花の名前、色、季節などで検索
   </p>
 </div>
 <div id="tagModal" style="display:none;">
-	<?php if (is_active_sidebar('modal')) : ?>
-      <ul>
-		  <?php dynamic_sidebar('modal'); ?>
-      </ul>
-	<?php endif; ?>
+  <?php if (is_active_sidebar('modal')) : ?>
+    <ul>
+      <?php dynamic_sidebar('modal'); ?>
+    </ul>
+  <?php endif; ?>
 </div>
 
 <?php wp_footer(); ?>
