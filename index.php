@@ -101,6 +101,6 @@
         <?php endif; ?>
       <?php wp_reset_postdata(); ?>
     </ul>
-    <a class="button-primary" href="information">もっと見る</a>
+    <a class="button-primary" href="<?php echo esc_url( home_url('/information/') ); ?>">もっと見る</a>
   </section>
 <?php get_footer(); ?>
