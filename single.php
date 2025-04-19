@@ -37,13 +37,15 @@
             <?php the_content(); ?>
           </div>
 
-          <?php if (image_metadata('camera')): ?>
+          <?php if (image_metadata('camera')):
+            $shutterSpeed = image_metadata('shutter_speed');
+          ?>
             <ul class="single-item__exif">
               <li><?php echo image_metadata('camera'); ?></li>
               <li>ISO<?php echo image_metadata('iso'); ?></li>
               <li>F<?php echo image_metadata('aperture'); ?></li>
-              <li>シャッター速度: <?php echo image_metadata('shutter_speed'); ?>sec.</li>
-              <li><?php echo image_metadata('focal_length'); ?>mm</li>
+              <li>シャッター速度: <?php shutterSpeeds($shutterSpeed); ?></li>
+              <li>焦点距離：<?php echo image_metadata('focal_length'); ?>mm</li>
             </ul>
           <?php endif; ?>
 
