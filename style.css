@@ -133,6 +133,7 @@ header .site-title .d {
     width: 100%;
     height: 60vh;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .top-image__slider img {
@@ -140,7 +141,7 @@ header .site-title .d {
     object-fit: cover;
     object-position: center;
     filter: brightness(0.9);
-    border-radius: 20px;
+
 }
 
 .top-image__texts {
@@ -200,6 +201,25 @@ header .site-title .d {
     border-top: 2px solid var(--white);
     border-right: 2px solid var(--white);
     rotate: 45deg;
+}
+
+/*
+    Swiper
+*/
+
+@keyframes zoomUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.swiper-slide-active .swiper-img,
+.swiper-slide-duplicate-active .swiper-img,
+.swiper-slide-prev .swiper-img {
+    animation: zoomUp 7s linear 0s normal both;
 }
 
 /*
