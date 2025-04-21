@@ -3,7 +3,7 @@
 		ピックアップ
 	</h2>
 	<p class="section-lead">
-		季節の写真
+		今月咲いている花
 	</p>
 	<ul class="pick-up__list common-image-list">
 		<?php

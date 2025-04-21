@@ -343,6 +343,7 @@ header .site-title .d {
     font-family: "Kaisei Opti", serif;
     text-align: center;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .section-lead {
@@ -1336,8 +1337,6 @@ ul.page-numbers li .current {
         margin-top: 8px;
         font-size: 16px;
     }
-
-    .section-lead
 
     .common-section {
         padding: 80px 40px;
