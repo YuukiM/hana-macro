@@ -3,6 +3,25 @@
     <div class="single-item__inner">
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
+					<script type="application/ld+json">
+						{
+							"@context": "https://schema.org",
+							"@type": "ImageObject",
+							"name": "<?php echo get_the_title();title_postfix(); ?>",
+							"description": "きれいな<?php echo get_the_title();title_postfix(); ?>です。商用・非商用問わず無料でご利用いただけます。",
+							"contentUrl": "<?php attachment_image('large', 'url'); ?>",
+							"thumbnail": "<?php attachment_image('thumbnail', 'url'); ?>",
+							"fileFormat": "image/jpeg",
+							"license": "https://macro-world.photo/terms-of-use/",
+							"acquireLicensePage": "<?php echo get_the_permalink(); ?>",
+							"creditText": "<?php bloginfo('name'); ?>",
+							"copyrightNotice": "MIYAZAKI Yuuki",
+							"creator": {
+								"@type": "Person",
+								"name": "MIYAZAKI Yuuki"
+							}
+						}
+					</script>
           <h1 class="single-item__heading">
             <?php echo get_the_title();
               title_postfix(); ?>
@@ -17,10 +36,13 @@
                 $tags = get_the_tags();
                 foreach ($tags as $tag):
                   ?>
-                  <li><a href="<?php echo get_tag_link($tag->term_id); ?>">
+                  <li>
+										<a href="<?php echo get_tag_link($tag->term_id); ?>">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                         <path d="M570-104q-23 23-57 23t-57-23L104-456q-11-11-17.5-26T80-514v-286q0-33 23.5-56.5T160-880h286q17 0 32 6.5t26 17.5l352 353q23 23 23 56.5T856-390L570-104Zm-57-56 286-286-353-354H160v286l353 354ZM260-640q25 0 42.5-17.5T320-700q0-25-17.5-42.5T260-760q-25 0-42.5 17.5T200-700q0 25 17.5 42.5T260-640ZM160-800Z"/>
-                      </svg><?php echo $tag->name; ?></a></li>
+                      </svg><?php echo $tag->name; ?>
+										</a>
+									</li>
                 <?php endforeach; ?>
             </ul>
           <?php } ?>
